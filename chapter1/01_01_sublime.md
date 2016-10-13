@@ -58,21 +58,15 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 
 ## 常用插件
 
-[**SideBarEnhancements**](https://github.com/titoBouzout/SideBarEnhancements)
+SideBarEnhancements：一款右键菜单增强插件。默认情况下，Sublime Text右键菜单功能很少。这个插件可以给Sublime Text的边栏菜单提供丰富的功能，包括：在工程中新建文件，移动文件，新窗口打开等。
 
-SideBarEnhancements是一款右键菜单增强插件。默认情况下，Sublime Text右键菜单功能很少。这个插件可以给Sublime Text的边栏菜单提供丰富的功能，包括：在工程中新建文件，移动文件，新窗口打开等。
+Bracket Highlighter：用于匹配括号，引号和html标签。对于很长的代码很有用。安装好之后，不需要设置插件会自动生效。
 
-SublimeLinter
+ConvertToUTF8：支持 GBK, BIG5, EUC-KR, EUC-JP, Shift\_JIS 等编码的插件
 
-AutoFileName
+Emmet：一个可以让你更快更高效地编写HTML和CSS，节省你大量时间的插件。它有[语法速查表](http://docs.emmet.io/cheat-sheet/)，可以帮助快速记忆简写形式。
 
-Bracket Highlighter
-
-ConvertToUTF8
-
-Emmet
-
-CssComb
+CssComb：用于CSS属性排序和格式化的插件。该插件依赖Node.js环境，如果尚未安装Node.js，可以去其官网下载对应的版本进行安装。安装完成后，即可使用CssComb插件（ctrl + shift + c）。注意，CssComb不支持IE hack。
 
 Autoprefixer
 
