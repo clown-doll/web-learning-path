@@ -4,7 +4,7 @@ Sublime Text 是一款跨平台文本编辑器。它保留文本编辑器轻便�
 
 本文会介绍 Sublime Text 安装、配置、常用插件及快捷键。
 
-## 安装
+## 安装Sublime Text
 
 我们可以在 [Sublime Text 的官网](http://www.sublimetext.com/3)下载对应的安装包。
 
@@ -17,6 +17,8 @@ Sublime Text 是一款跨平台文本编辑器。它保留文本编辑器轻便�
 ![](/assets/sublime2.jpg)
 
 安装完成后，首次打开 Sublime Text。在菜单栏 view -&gt; show sidebar，将侧边打开。
+
+![](/assets/sublime_03.gif)
 
 ## 安装插件
 
@@ -41,14 +43,44 @@ Package Control是在线安装插件的工具。在利用它安装插件前，�
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) 
 ```
 
+![](/assets/sublime2_03.gif)
+
 **使用Package Control安装插件**：
 
 1. 调出安装插件命令面板（Ctrl+Shift+P）
 
+  ![](/assets/sublime3_03.gif)
+
 2. 输入install 调出 Install Package 选项并回车，然后在列表中选中要安装的插件。
+
+  ![](/assets/sublime4_03.gif)
 
 
 ## 常用插件
+
+[**SideBarEnhancements**](https://github.com/titoBouzout/SideBarEnhancements)
+
+SideBarEnhancements是一款右键菜单增强插件。默认情况下，Sublime Text右键菜单功能很少。这个插件可以给Sublime Text的边栏菜单提供丰富的功能，包括：在工程中新建文件，移动文件，新窗口打开等。
+
+SublimeLinter
+
+AutoFileName
+
+Bracket Highlighter
+
+ConvertToUTF8
+
+Emmet
+
+CssComb
+
+Autoprefixer
+
+JsFormat
+
+Alignment
+
+DocBlockr
 
 ## 配置
 
@@ -112,6 +144,4 @@ Sublime Text使用JSON文件进行配置。在菜单栏 Preferences -&gt; settin
     "theme": "Soda Dark.sublime-theme"
 }
 ```
-
-
 
