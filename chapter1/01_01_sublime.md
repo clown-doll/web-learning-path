@@ -76,6 +76,27 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 
 * [**DocBlockr**](https://packagecontrol.io/packages/DocBlockr)：增强JS注释的插件。只需要在函数上面输入\/\*\* ,然后按tab 就会自动生成注释。
 
+* [**All  Autocomplete**](https://github.com/alienhard/SublimeAllAutocomplete)：会搜索所有打开的文件来寻找匹配的提示词。
+
+* [**SublimeTmpl**](https://github.com/kairyou/SublimeTmpl)：能新建html、css、javascript、php、python、ruby六种类型的模板。所有文件模板都在插件目录的templates文件夹里，可以自动逸编辑文件模板。对应的快捷键：Ctrl + Alt + H -&gt; html，Ctrl + Alt + J -&gt; javascript，Ctrl + Alt + C -&gt; css
+
+* [**ColorPicker**](http://weslly.github.io/ColorPicker/)：在编辑CSS样式的时候，ColorPicker可以让sublime text 内置一个调色盘，调好颜色，点击OK就会在光标处生成十六进制颜色代码。
+
+* [**FileHeader**](https://github.com/shiyanhui/FileHeader)：文件模板 , 可自动更新修改时间。
+
+
+## 主题安装
+
+Sublime主题其实也算是插件。它的安装方式与插件的安装方式一样。可以直接去 github 上直接下载主题包，解压到本地。也可以通过 Package Control 下载安装。
+
+以 Theme – Soda 主题为例。 Ctrl+Shift+P 调出调出插件安装命令面板，输入 Theme – Soda 下载主题。
+
+下载完成后，进行配置。  Theme – Soda 主题有两种皮肤，选择下面任意一种进行配置即可（具体配置文件，下面会提到）：
+
+* 白色皮肤 "theme": "Soda Light.sublime-theme" 
+
+* 黑色皮肤  "theme": " Soda Dark.sublime-theme" 
+
 
 ## 配置
 
@@ -140,7 +161,76 @@ Sublime Text使用JSON文件进行配置。在菜单栏 Preferences -&gt; settin
 }
 ```
 
-## 常用快捷键
+## 常用快捷键（win）
+
+**选择**
+
+* 选择一个选中项的下一个匹配项：Ctrl + D
+
+* 选择一个选中项的所有匹配项：Alt + F3
+
+* 选择与光标关联的开始和结束标签：Ctrl + Shift + '
+
+* 选择容器里的内容：Ctrl + Shift + A
+
+* 选择括号内的内容：Ctrl + Shift + M
+
+
+**移动行和文本**
+
+* 上移或下移行：Ctrl + Shift + ↑ 或 ↓
+
+* 复制行：Ctrl + Shift + D
+
+* 增加和减少缩进：Ctrl + \[ 或 \]
+
+
+**剪切、粘贴**
+
+* 剪切行：Ctrl + X
+
+* 粘贴并保持缩进：Ctrl + Shift + V
+
+
+**快速增加新行**
+
+* 在当前行下新建一行：Ctrl + Enter
+
+* 在当前行上添加一行：Ctrl + Shift + Enter
+
+
+**窗口操作**
+
+* 关闭当前打开文件 ：Ctrl + W
+
+* 关闭所有打开文件：Ctrl + Shift + W
+
+* 新建窗口：Ctrl + N
+
+* 分屏显示：Alt + Shift + 数字
+
+**注释**
+
+* 注释选中行：Ctrl + \/
+
+* 当前位置插入注释：Ctrl + Shif + \/
+
+* 块注释：Ctrl + Alt + \/
+
+
+**查找**
+
+* 查找内容：Ctrl + F
+
+* 查找并替换：Ctrl + Shift + F
+
+
+**其他**
+
+* 跳转到第几行：Ctrl + G
+
+* 闭合标签：Alt + .
+
 
 ## 参考资料
 
