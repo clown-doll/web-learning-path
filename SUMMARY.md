@@ -25,18 +25,18 @@
       * [参考资料](/chapter1/01_01_08_reference.md)
 
 
-    * [webstorm](/chapter1/01_02_webstorm.md)
 
 
-  * [html](/chapter1/02_html.md)
+* WebStorm
 
-  * [css](/chapter1/03_css.md)
+* [html](/chapter1/02_html.md)
 
-  * [photoshop](/chapter1/04_photoshop.md)
+* [css](/chapter1/03_css.md)
 
-  * [page](/chapter1/05_page.md)
+* [photoshop](/chapter1/04_photoshop.md)
 
-  * [page\_optimize](/chapter1/06_page_optimize.md)
+* [page](/chapter1/05_page.md)
 
+* [page\_optimize](/chapter1/06_page_optimize.md)
 
 
