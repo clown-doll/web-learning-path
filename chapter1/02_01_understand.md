@@ -14,7 +14,7 @@ HTML 文件是有自己固有结构的，主要由两大部分组成，分别为
         <title>Document</title>
     </head>
     <body>
-        
+
     </body>
 </html>
 ```
@@ -39,7 +39,9 @@ HTML 文件是有自己固有结构的，主要由两大部分组成，分别为
 
 将文件保存，我们就完成了第一个网页的书写。（ HTML文件的扩展名是`.html`或`.htm`）
 
+在浏览器中查看（右键 -&gt; Open in Browser ）的效果：
 
+![](/assets/html3.png)
 
 ## DOCTYPE声明
 
@@ -62,33 +64,9 @@ HTML 文档是一个树状结构。所有的网页标签都包裹在`<html></htm
 
 ![](/assets/html.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 标签语法
 
 doctype
-
-
 
 代码注释
 
