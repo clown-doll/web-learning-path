@@ -47,11 +47,11 @@ HTML 文件是有自己固有结构的，主要由两大部分组成，分别为
 
 我们生成代码的第一行，是HTML为浏览提供的文档类型声明，告诉浏览器我们用的HTML是什么版本。这里我们使用的是 HTML5 的  DOCTYPE 声明。
 
-HTML 4.01 提供了三种 DOCTYPE 声明 ： 过渡的\(Transitional\) 、严格的\(Strict\)、框架的\(Frameset\)，它们的写法都很长，难于记忆。由于 HTML5 的 DOCTYPE 声明简介，并且各种主流浏览器的解析模式相对最标准。所以我们这里推荐都`<!DOCTYPE html>`来声明 HTML 文档。对于其他几种声明，有兴趣的同学可以去 W3School 上查看[相关文档](http://www.w3school.com.cn/tags/tag_doctype.asp "HTML <!DOCTYPE> 标签")。
+HTML 4.01 提供了三种 DOCTYPE 声明 ： 过渡的\(Transitional\) 、严格的\(Strict\)、框架的\(Frameset\)，它们的写法都很长，难于记忆。由于 HTML5 的 DOCTYPE 声明简介，并且各种主流浏览器的解析模式相对最标准。所以我们这里推荐都用`<!DOCTYPE html>`来声明 HTML 文档。对于其他几种声明，有兴趣的同学可以去 W3School 上查看[相关文档](http://www.w3school.com.cn/tags/tag_doctype.asp "HTML <!DOCTYPE> 标签")。
 
 注意：
 
-* DOCTYPE 声明必须放在每一个 HTML 文档第一行，在所有代码和标识之上；
+* DOCTYPE 声明必须放在每一个 HTML 文档第一行，在所有代码和标识之上
 
 * DOCTYPE 声明没有结束标签
 
@@ -86,8 +86,6 @@ HTML 文档是一个树状结构。所有的网页标签都包裹在`<html></htm
 ```
 
 保存，重新在浏览器中查看，发现看到的内容还是跟之前一样。嗯，注释了的内容是不会在浏览器中显示的。
-
-
 
 关于HTML文件的基础知识就介绍到这里。接下来，我们会对HTML常用的标签做具体说明。
 

@@ -18,8 +18,9 @@
   * [HTML基础](chapter1/02_html.md)
     * [认识HTML文件](chapter1/02_01_understand.md)
     * [认识HTML标签](chapter1/02_02_labels.md)
-      * [布局标签](chapter1/02_02_01_layout.md)
+      * [文档标签](/chapter1/02_02_00_doc.md "文档标签")
       * [文章标签](chapter1/02_02_02_article.md)
+      * [布局标签](chapter1/02_02_01_layout.md)
       * [列表标签](chapter1/02_02_03_list.md)
       * [链接标签](chapter1/02_02_04_link.md)
       * [多媒体标签](chapter1/02_02_05_media.md)
@@ -27,7 +28,7 @@
       * [表单标签](chapter1/02_02_06_form.md)
 
     * [标签分类](chapter1/02_03_type.md)
-    * [HTML规范](/chapter1/02_04_norm.md "HTML规范")
+    * [HTML规范](chapter1/02_04_norm.md)
 
 
 
