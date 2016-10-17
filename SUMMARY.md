@@ -16,7 +16,7 @@
     * [HTML基础](chapter1/02_html.md)
         * [认识HTML文件](chapter1/02_01_understand.md)
         * [认识HTML标签](chapter1/02_02_labels.md)
-            * [文档标签](chapter1/02_02_00_doc.md)
+            * [文档和元数据标签](chapter1/02_02_00_doc.md)
             * [布局标签](chapter1/02_02_01_layout.md)
             * [文章标签](chapter1/02_02_02_article.md)
             * [列表标签](chapter1/02_02_03_list.md)

@@ -45,13 +45,13 @@ HTML 文件是有自己固有结构的，主要由两大部分组成，分别为
 
 ## DOCTYPE声明
 
-我们生成代码的第一行，是HTML为浏览提供的文档类型声明，告诉浏览器我们用的HTML是什么版本。这里我们使用的是 HTML5 的  DOCTYPE 声明。
+我们生成代码的第一行，是 HTML 为浏览提供的文档类型声明，它告诉浏览器两件事件：1，它处理的是 HTML 文档；2，用来标记该文档的 HTML 是属于哪个版本。
 
-HTML 4.01 提供了三种 DOCTYPE 声明 ： 过渡的\(Transitional\) 、严格的\(Strict\)、框架的\(Frameset\)，它们的写法都很长，难于记忆。由于 HTML5 的 DOCTYPE 声明简介，并且各种主流浏览器的解析模式相对最标准。所以我们这里推荐都用`<!DOCTYPE html>`来声明 HTML 文档。对于其他几种声明，有兴趣的同学可以去 W3School 上查看[相关文档](http://www.w3school.com.cn/tags/tag_doctype.asp "HTML <!DOCTYPE> 标签")。
+HTML 4.01 提供了三种 DOCTYPE 声明 ： 过渡的\(Transitional\) 、严格的\(Strict\)、框架的\(Frameset\)，它们的写法都很长，难于记忆。这里我们使用的是 HTML5 的 DOCTYPE 声明，它相对比较简介，并且各种主流浏览器的解析模式相对最标准。所以我们推荐都用 `<!DOCTYPE html>` 来声明 HTML 文档。对于其他几种声明，有兴趣的同学可以去 W3School 上查看[相关文档](http://www.w3school.com.cn/tags/tag_doctype.asp "HTML <!DOCTYPE> 标签")。
 
 注意：
 
-* DOCTYPE 声明必须放在每一个 HTML 文档第一行，在所有代码和标识之上
+* DOCTYPE 声明必须放在每一个 HTML 文档第一行，每一个 HTML 文档都必须以 DOCTYPE 元素开头。
 
 * DOCTYPE 声明没有结束标签
 
