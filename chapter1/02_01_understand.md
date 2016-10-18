@@ -89,5 +89,5 @@ HTML 文档是一个树状结构。所有的网页标签都包裹在`<html></htm
 
 ## 小结
 
-关于 HTML 文件的基础知识就介绍到这里。这一节重点应该掌握 HTML 文件的DOCTYPE声明和文档结构。接下来，我们会对 HTML 常用的标签做具体说明。
+关于 HTML 文件的基础知识就介绍到这里。这一节重点应该掌握 HTML 文件的DOCTYPE声明和文档结构，对应的 demo 在[这里](https://github.com/clown-doll/web-learning-path-demos/blob/master/html/01_understand.html)。接下来，我们会对 HTML 常用的标签做具体说明。
 
