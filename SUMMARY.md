@@ -22,8 +22,8 @@
             * [列表标签](chapter1/02_02_03_list.md)
             * [链接标签](chapter1/02_02_04_link.md)
             * [多媒体标签](chapter1/02_02_05_media.md)
+            * [表单](chapter1/02_02_06_form.md)
             * [表格标签](chapter1/02_02_06_table.md)
-            * [表单标签](chapter1/02_02_06_form.md)
         * [标签分类](chapter1/02_03_type.md)
         * [HTML规范](chapter1/02_04_norm.md)
 
