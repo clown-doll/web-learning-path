@@ -1,4 +1,4 @@
-## 安装Sublime Text
+# 安装Sublime Text
 
 我们可以在 [Sublime Text 的官网](http://www.sublimetext.com/3)下载对应的安装包。
 
