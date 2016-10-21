@@ -1,4 +1,4 @@
-## 参考资料
+# 参考资料
 
 * [牛人总结的Sublime Text的心得经验](https://github.com/jikeytang/sublime-text)
 
