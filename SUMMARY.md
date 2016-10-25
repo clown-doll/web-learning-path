@@ -30,6 +30,8 @@
     * [标签分类](chapter1/02_03_type.md)
     * [HTML编码规范](chapter1/02_04_norm.md)
 
-  * [CSS基础](/chapter1/03_css.md)
+  * [CSS基础](chapter1/03_css.md)
+    * [认识CSS](/chapter1/03_01_base.md)
+
 
 
