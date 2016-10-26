@@ -313,9 +313,46 @@ E[attr~=value] {
 
 上例中，两个元素的 `title` 属性值都符合条件，因此显示为红色文字。
 
+## 后代选择器
 
+后代选择器又可以称为包含选择器。
 
+当使用空格连接两个元素时，便使得该选择器可以只匹配那些由第一个元素作为祖先元素的所有第二个元素\(后代元素\) 。代选择器不需要相匹配元素之间要有严格的父子关系，只要是其后代元素即可。
 
+语法：
+
+```
+E Y {
+    样式声明
+}
+```
+
+```
+p a{ color: red; }
+```
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        p a{ color: red; }
+    </style>
+</head>
+<body>
+    <p>
+        在 <a href="#" target="_blank">CSS</a> 中，选择器指明了我们所定义的样式将<strong>作用于哪个元素</strong>
+    </p>
+</body>
+</html>
+```
+
+![](/assets/css-selector-attr2.png)
+
+上例中，`p` 元素的后代 `a` 元素，文字被设置为红色。
 
 
 
