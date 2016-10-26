@@ -217,5 +217,34 @@ E[attr=value] {
 
 如果需要根据属性值中的词列表的某个词进行选择，则需要使用波浪号（ `~` ）。
 
+```
+E[attr~=value] {
+    样式声明
+}
+```
+
+```
+[title~="css"]
+```
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器-根据部分属性值选择</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *[class~="red"] { color: red; }
+    </style>
+</head>
+<body>
+    <p>
+        在 <a href="#" class="red link">CSS</a> 中，选择器指明了我们所定义的样式将<strong class="red">作用于哪个元素</strong>
+    </p>
+</body>
+</html>
+```
+
 
 
