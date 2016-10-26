@@ -246,3 +246,45 @@ E[attr~=value] {
 </html>
 ```
 
+![](/assets/css-selector-attr.png)
+
+上例中，两个元素的 `class` 属性都含有 `red` ，因此都显示为红色文字。
+
+### 子串匹配属性选择
+
+子串匹配属性选择器是指选择器能够匹配属性值的子串，主要有三种形式：
+
+* `[attr^=value]`：选择带有以 attr 命名的，且值是以"value"开头的属性的元素。
+
+* `[attr$=value]`： 选择带有以 attr 命名的，且值是以"value"结尾的属性的元素。 
+
+* `[attr*=value]`：选择带有以 attr 命名的，且值包含有"value"的属性的元素。
+
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器-子串匹配</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *[title*="ss"] { color: red; }
+        *[title$="ed"] { font-weight: normal; }
+        *[title^="cs"] { font-weight: 700; }
+    </style>
+</head>
+<body>
+    <p>
+        在<a href="#" title="css">CSS</a>中，选择器指明了我们所定义的样式将<strong title="stressed">作用于哪个元素</strong>
+    </p>
+</body>
+</html>
+```
+
+![](/assets/css-selector-attr3.png)
+
+上例中，带有 `title` 属性的两个元素，其 `title` 值都含有 `ss` ，因此两个元素文字都显示为红色。另外，`title` 属性值以 `cs` 开头的元素加粗显示，`title` 属性值以 `ed` 结尾的元素字体不加粗。
+
+
+
