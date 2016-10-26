@@ -31,7 +31,8 @@
     * [HTML编码规范](chapter1/02_04_norm.md)
 
   * [CSS基础](chapter1/03_css.md)
-    * [认识CSS](/chapter1/03_01_base.md)
+    * [认识CSS](chapter1/03_01_base.md)
+    * [CSS选择器](/chapter1/03_02_selector.md)
 
 
 
