@@ -534,3 +534,49 @@ ul > li:first-child { color: red; }
 
 ![](/assets/css-selector-after.png)
 
+选择器分组
+
+我们经常会遇到这样的情况，希望A元素和B元素都拥有同样的样式，这时候我们就可以将选择器进行分组。我们通过英文逗号（ `,` ）来实现：
+
+```
+E, Y {
+    样式声明
+}
+```
+
+可以将任意多个选择器分组在一起，对此没有任何限制。
+
+```
+a, strong { color: red; }
+```
+
+上面的代码相当于
+
+```
+a { color: red; }
+strong { color: red; }
+```
+
+一起来看一个完整的例子
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器分组</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        a, strong { color: red; }
+    </style>
+</head>
+<body>
+    <p>
+        在 <a href="#">CSS</a> 中，选择器指明了我们所定义的样式将<strong>作用于哪个元素</strong>
+    </p>
+</body>
+</html>
+```
+
+
+
