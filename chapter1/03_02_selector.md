@@ -436,3 +436,98 @@ h2 + p { color: red; }
 
 相邻兄弟是需要紧邻的元素，因此，上例中，只有 `h2` 元素紧邻的 `p` 元素才被显示为红色。
 
+## 伪类
+
+伪类就是一种虚构的状态或者说是一个具有特殊属性的元素可以使用 CSS 进行样式修饰。伪类前面总是加一个冒号（ `:` ）。之后跟着伪类的名字或者是括号里面的值。常见的几种伪类是： `:link` ，` :visited` ， `:hover` ， `:active` 和 `:first-child` 。
+
+伪类可以和 CSS 一起使用，定义不同状态下的样式。
+
+**超链接的不同状态：**
+
+```
+a:link { color: red; } /* 未访问的链接 */
+a:visited { color: green; } /* 已访问的链接 */
+a:hover { color: pink; } /* 鼠标划过链接 */
+a:active { color: #ccc; } /* 已选中的链接 */
+```
+
+注意：在 CSS 定义中，`a:hover` 必须被置于 `a:link` 和 `a:visited` 之后，才是有效的。`a:active` 必须被置于 `a:hover` 之后，才是有效的。
+
+**选择第一个子元素：**
+
+```
+ul > li:first-child { color: red; }
+```
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类 - 第一个子元素</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        ul > li:first-child { color: red; }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+</body>
+</html>
+```
+
+![](/assets/css-selector-first-child.png)
+
+## 伪元素
+
+关于伪元素，它们更像是虚拟的元素可以和 HTML 元素一样对待。区别在于它们并不存在于文档树或者 DOM 之中。我们仍然可以使用 CSS 对其定义样式。常见的几种伪元素是： `:after` ， `:before` 。
+
+**在元素的内容前面插入新内容：**
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素 - :before</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        p:before{ content: "before "; font-style: italic; color: #ccc; }
+    </style>
+
+</head>
+<body>
+    <p>伪元素</p>
+</body>
+</html>
+```
+
+![](/assets/css-selector-before.png)
+
+**在元素的内容后面插入新内容：**
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素 - :after</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        p:after{ content: " after"; font-style: italic; color: #ccc; }
+    </style>
+
+</head>
+<body>
+    <p>伪元素</p>
+</body>
+</html>
+```
+
+![](/assets/css-selector-after.png)
+
