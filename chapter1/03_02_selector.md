@@ -139,10 +139,10 @@ ID选择器在形式上与类选择器有很多相似的地方，只不过它是
 
 ### 简单属性选择
 
-如果希望选择有某个属性的元素，而不论属性值是什么，可以使用简单属性选择器。 
+如果希望选择有某个属性的元素，而不论属性值是什么，可以使用简单属性选择器。
 
 ```
-元素[属性] {
+E[attr] {
     样式声明
 }
 ```
@@ -163,7 +163,9 @@ ID选择器在形式上与类选择器有很多相似的地方，只不过它是
     </style>
 </head>
 <body>
-    <p>在 <a href="http://www.w3school.com.cn/css/" title="css" target="_blank">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="stressed">作用于哪个元素</strong>。</p>
+    <p>
+        在<a href="#" title="css">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="stress">作用于哪个元素</strong>
+    </p>
 </body>
 </html>
 ```
@@ -177,7 +179,7 @@ ID选择器在形式上与类选择器有很多相似的地方，只不过它是
 除了选择拥有某些属性的元素，还可以进一步缩小选择范围，只选择有特定属性值的元素。
 
 ```
-元素[属性="值"] {
+E[attr=value] {
     样式声明
 }
 ```
@@ -198,7 +200,9 @@ ID选择器在形式上与类选择器有很多相似的地方，只不过它是
     </style>
 </head>
 <body>
-    <p>在 <a href="http://www.w3school.com.cn/css/" title="css" target="_blank">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="stressed">作用于哪个元素</strong>。</p>
+    <p>
+        在<a href="#" title="css">CSS</a>中，选择器指明了我们所定义的样式将<strong title="stress">作用于哪个元素</strong>
+    </p>
 </body>
 </html>
 ```
@@ -210,6 +214,4 @@ ID选择器在形式上与类选择器有很多相似的地方，只不过它是
 注意：这种格式要求**属性与属性值必须完全匹配**。否则将不能按照预期效果呈现。
 
 根据部分属性值选择
-
-
 
