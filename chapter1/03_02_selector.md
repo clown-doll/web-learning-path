@@ -317,7 +317,7 @@ E[attr~=value] {
 
 后代选择器又可以称为包含选择器。
 
-当使用空格连接两个元素时，便使得该选择器可以只匹配那些由第一个元素作为祖先元素的所有第二个元素\(后代元素\) 。代选择器不需要相匹配元素之间要有严格的父子关系，只要是其后代元素即可。
+当使用空格连接两个元素时，便使得该选择器可以只匹配那些由第一个元素作为祖先元素的所有第二个元素\(后代元素\) 。后代选择器不需要相匹配元素之间要有严格的父子关系，只要是其后代元素即可。
 
 语法：
 
@@ -328,7 +328,7 @@ E Y {
 ```
 
 ```
-p a{ color: red; }
+div a{ color: red; }
 ```
 
 ```
@@ -339,20 +339,63 @@ p a{ color: red; }
     <title>后代选择器</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        p a{ color: red; }
+        div a{ color: red; }
     </style>
 </head>
 <body>
-    <p>
-        在 <a href="#" target="_blank">CSS</a> 中，选择器指明了我们所定义的样式将<strong>作用于哪个元素</strong>
-    </p>
+    <div>
+        <a href="#">后代选择器</a>
+        <br>
+        <p>在 <a href="#">CSS</a> 中，后代选择器不需要相匹配元素之间要有严格的父子关系</p>
+    </div>
 </body>
 </html>
 ```
 
-![](/assets/css-selector-attr2.png)
+![](/assets/css-selector-afterworld.png)
 
-上例中，`p` 元素的后代 `a` 元素，文字被设置为红色。
+上例中，`div` 元素的后代 `a` 元素，文字被设置为红色。
+
+## 子元素选择器
+
+如果不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，那么可以选择用子元素选择器。
+
+语法：
+
+```
+E > Y {
+    样式声明
+}
+```
+
+```
+div > a{ color: red; }
+```
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子元素选择器</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div > a{ color: red; }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">后代选择器</a>
+        <br>
+        <p>在 <a href="#">CSS</a> 中，后代选择器不需要相匹配元素之间要有严格的父子关系</p>
+    </div>
+</body>
+</html>
+```
+
+![](/assets/css-selector-child.png)
+
+上例中，只有第一个 `a` 元素是 `div` 元素的直接后代，因此，只有它显示为红色文字。
 
 
 
