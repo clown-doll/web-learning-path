@@ -578,5 +578,5 @@ strong { color: red; }
 </html>
 ```
 
-
+上例中，`a` 元素跟 `strong` 元素都将显示为红色文字。
 
