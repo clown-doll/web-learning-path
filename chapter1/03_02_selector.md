@@ -70,10 +70,11 @@ p { font-size: 16px;}
     <style>
         .red { color: red; }
     </style>
-
 </head>
 <body>
-    <p>在 <span class="red">CSS</span> 中，选择器指明了我们所定义的样式<span class="red">将作用于哪个元素</span>。</p>
+    <p>
+        在 <span class="red">CSS</span> 中，选择器指明了我们所定义的样式<span class="red">将作用于哪个元素</span>
+    </p>
 </body>
 </html>
 ```
@@ -124,7 +125,9 @@ ID选择器在形式上与类选择器有很多相似的地方，只不过它是
     </style>
 </head>
 <body>
-    <p id="tip">在 CSS 中，选择器指明了我们所定义的样式将作用于哪个元素。</p>
+    <p id="tip">
+        在 CSS 中，选择器指明了我们所定义的样式将作用于哪个元素。
+    </p>
 </body>
 </html>
 ```
@@ -156,7 +159,7 @@ E[attr] {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>属性选择器</title>
+    <title>属性选择器-简单选择</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         *[title] { color: red; }
@@ -164,7 +167,7 @@ E[attr] {
 </head>
 <body>
     <p>
-        在<a href="#" title="css">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="stress">作用于哪个元素</strong>
+        在 <a href="#" title="css">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="stress">作用于哪个元素</strong>
     </p>
 </body>
 </html>
@@ -193,7 +196,7 @@ E[attr=value] {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>属性选择器-简单选择</title>
+    <title>属性选择器-根据具体属性值选择</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         *[title="css"] { color: red; }
@@ -201,7 +204,7 @@ E[attr=value] {
 </head>
 <body>
     <p>
-        在<a href="#" title="css">CSS</a>中，选择器指明了我们所定义的样式将<strong title="stress">作用于哪个元素</strong>
+        在 <a href="#" title="css">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="stressed">作用于哪个元素</strong>
     </p>
 </body>
 </html>
@@ -240,7 +243,7 @@ E[attr~=value] {
 </head>
 <body>
     <p>
-        在<a href="#" class="red link">CSS</a>中，选择器指明了我们所定义的样式将<strong class="red">作用于哪个元素</strong>
+        在 <a href="#" class="red link">CSS</a> 中，选择器指明了我们所定义的样式将<strong class="red">作用于哪个元素</strong>
     </p>
 </body>
 </html>
@@ -276,7 +279,7 @@ E[attr~=value] {
 </head>
 <body>
     <p>
-        在<a href="#" title="css">CSS</a>中，选择器指明了我们所定义的样式将<strong title="stressed">作用于哪个元素</strong>
+        在 <a href="#" title="css">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="stressed">作用于哪个元素</strong>
     </p>
 </body>
 </html>
@@ -303,7 +306,7 @@ E[attr~=value] {
 </head>
 <body>
     <p>
-        在<a href="#" title="css">CSS</a>中，选择器指明了我们所定义的样式将<strong title="css-stress">作用于哪个元素</strong>
+        在 <a href="#" title="css">CSS</a> 中，选择器指明了我们所定义的样式将<strong title="css-stressed">作用于哪个元素</strong>。
     </p>
 </body>
 </html>
@@ -438,7 +441,7 @@ h2 + p { color: red; }
 
 ## 伪类
 
-伪类就是一种虚构的状态或者说是一个具有特殊属性的元素可以使用 CSS 进行样式修饰。伪类前面总是加一个冒号（ `:` ）。之后跟着伪类的名字或者是括号里面的值。常见的几种伪类是： `:link` ，` :visited` ， `:hover` ， `:active` 和 `:first-child` 。
+伪类就是一种虚构的状态或者说是一个具有特殊属性的元素可以使用 CSS 进行样式修饰。伪类前面总是加一个冒号（ `:` ）。之后跟着伪类的名字或者是括号里面的值。常见的几种伪类是： `:link` ，`:visited` ， `:hover` ， `:active` 和 `:first-child` 。
 
 伪类可以和 CSS 一起使用，定义不同状态下的样式。
 
