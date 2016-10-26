@@ -240,11 +240,9 @@ E[attr~=value] {
 </head>
 <body>
     <p>
-        在 <a href="#" class="red link">CSS</a> 中，选择器指明了我们所定义的样式将<strong class="red">作用于哪个元素</strong>
+        在<a href="#" class="red link">CSS</a>中，选择器指明了我们所定义的样式将<strong class="red">作用于哪个元素</strong>
     </p>
 </body>
 </html>
 ```
-
-
 
