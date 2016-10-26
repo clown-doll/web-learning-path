@@ -256,7 +256,7 @@ E[attr~=value] {
 
 * `[attr^=value]`：选择带有以 attr 命名的，且值是以"value"开头的属性的元素。
 
-* `[attr$=value]`： 选择带有以 attr 命名的，且值是以"value"结尾的属性的元素。 
+* `[attr$=value]`： 选择带有以 attr 命名的，且值是以"value"结尾的属性的元素。
 
 * `[attr*=value]`：选择带有以 attr 命名的，且值包含有"value"的属性的元素。
 
@@ -285,6 +285,39 @@ E[attr~=value] {
 ![](/assets/css-selector-attr3.png)
 
 上例中，带有 `title` 属性的两个元素，其 `title` 值都含有 `ss` ，因此两个元素文字都显示为红色。另外，`title` 属性值以 `cs` 开头的元素加粗显示，`title` 属性值以 `ed` 结尾的元素字体不加粗。
+
+### 特定属性选择类型
+
+`[attr|=value]`：选择带有以 attr 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中至少一个值为"value"或者至少一个值以"value-"（"-"为连字符，Unicode编码为U+002D）开头。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器-特定选择</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *[title|="css"] { color: red; }
+    </style>
+</head>
+<body>
+    <p>
+        在<a href="#" title="css">CSS</a>中，选择器指明了我们所定义的样式将<strong title="css-stress">作用于哪个元素</strong>
+    </p>
+</body>
+</html>
+```
+
+![](/assets/css-selector-attr.png)
+
+上例中，两个元素的 `title` 属性值都符合条件，因此显示为红色文字。
+
+
+
+
+
+
 
 
 
