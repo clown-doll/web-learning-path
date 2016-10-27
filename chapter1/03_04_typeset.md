@@ -96,7 +96,7 @@ p { font-weight: bold; }
 * `oblique`： 倾斜的字体样式
 
 
-### 文本修饰 
+### 文本修饰
 
 有时候我们可能需要将文本设置为由下划线或中划线等样式，CSS 中可以用 `text-decoration` 属性来定义。
 
@@ -118,6 +118,93 @@ p { font-weight: bold; }
 ```
 
 ![](/assets/css-typeset-text-decoration.png)
+
+## 段落排版
+
+段落排版主要是控制段落的缩进、行间距，对齐等。
+
+### 缩进
+
+`text-indent` 属性用于规定文本块中首行文本的缩进。
+
+```
+p { text-decoration: 2em; }
+```
+
+通常情况下，我们会控制段落首行缩进两个文字大小，如上例所设置的。
+
+另外，`text-indent` 运行设置负值，如果设置了负值，文本将往左偏移
+
+我们一起来看下 `text-index` 在浏览器中的显示效果：
+
+![](/assets/css-typeset-text-indent.png)
+
+### 行间距
+
+`line-height` 属性用于设置文本行间的距离（行高）。
+
+```
+.lineheight { line-height: 2; }
+.lineheight2 { line-height: 40px; }
+```
+
+![](/assets/css-typeset-line-height.png)
+
+如上例所示，line-height 属性的取值可以是数字，也可以是固定的尺寸或者百分比。
+
+* 数字 ：此数字会与当前的字体尺寸相乘来设置行间距。
+
+* 百分比：基于当前字体尺寸的百分比设置行间距。
+
+* 固定尺寸：通常是带单位的固定尺寸，如 20px 等。
+
+
+### 中文字间距、字母间距
+
+如果想在网页排版中设置文字间隔或者字母间隔就可以使用 `letter-spacing` 属性来定义。
+
+如果想控制英文单词直接的间距，可以使用 `word-spacing` 属性来定义。
+
+```
+.letter { letter-spacing: 15px; }
+.word { word-spacing: 30px; }
+```
+
+![](/assets/css-typeset-letter_word_space.png)
+
+### 文本对齐
+
+段落排版中，还有一个比较常用到的属性 `text-align` ，用于定义文本水平方向的对齐方式。
+
+有以下几种对齐方式：
+
+* `left`：左对齐
+
+* `right`：右对齐
+
+* `center`：居中对齐
+
+* `justify`：两端对齐
+
+
+```
+.left { text-align: left; }
+.right { text-align: right; }
+.center { text-align: center; }
+.justify {  
+    text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+}
+```
+
+![](/assets/css-typeset-text_align.png)
+
+大家可能会好奇，为什么两端对齐的代码有那么长一串。这是为了设置各个浏览器的兼容性。 `text-justify` 在各个浏览器的支持情况不一样，因此，为了让主流浏览器都显示出我们想要的效果，需要针对每个浏览器进行特殊设置。关于浏览器兼容性的问题，我们后续会专门讲解。
+
+## 链接
 
 
 
