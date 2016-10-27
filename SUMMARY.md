@@ -33,7 +33,8 @@
   * [CSS基础](chapter1/03_css.md)
     * [认识CSS](chapter1/03_01_base.md)
     * [CSS选择器](chapter1/03_02_selector.md)
-    * [继承、层叠和特殊性](/chapter1/03_03_inherit.md)
+    * [继承、层叠和特殊性](chapter1/03_03_inherit.md)
+    * [格式化排版](/chapter1/03_04_typeset.md)
 
 
 
