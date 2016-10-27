@@ -87,19 +87,37 @@ p { font-weight: bold; }
 
 ![](/assets/css-typeset-font-stylet.png)
 
-如上例所示， `font-style` 属性有三个常见取值： 
+如上例所示， `font-style` 属性有三个常见取值：
 
-* `normal`： 标准的字体样式 
+* `normal`： 标准的字体样式
 
-* `italic`： 斜体的字体样式 
+* `italic`： 斜体的字体样式
 
-* `oblique`： 倾斜的字体样式 
-
-
+* `oblique`： 倾斜的字体样式
 
 
+### 文本修饰 
+
+有时候我们可能需要将文本设置为由下划线或中划线等样式，CSS 中可以用 `text-decoration` 属性来定义。
+
+常见的取值有：
+
+* `none`：为默认值。无修饰。
+
+* `underline`：文本下的一条线。
+
+* `overline`：文本上的一条线。
+
+* `line-through`： 穿过文本的一条线。
 
 
+```
+.overline { text-decoration: overline; }
+.through { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+```
+
+![](/assets/css-typeset-text-decoration.png)
 
 
 
