@@ -204,7 +204,144 @@ p { text-decoration: 2em; }
 
 大家可能会好奇，为什么两端对齐的代码有那么长一串。这是为了设置各个浏览器的兼容性。 `text-justify` 在各个浏览器的支持情况不一样，因此，为了让主流浏览器都显示出我们想要的效果，需要针对每个浏览器进行特殊设置。关于浏览器兼容性的问题，我们后续会专门讲解。
 
-## 链接
+## 背景
+
+CSS 中允许纯色作为背景，也允许使用图片作为背景。
+
+### 背景色
+
+CSS 中使用 `background-color` 属性为元素设置背景色。这个属性接受任何合法的颜色值。
+
+```
+body { background-color: #999; }
+```
+
+可以为所有元素都设置背景色，其默认值是  `transparent` ，即透明。
+
+### 背景图片
+
+想要图像当作背景，需要使用 `background-image` 属性。 其默认值是 `none`，及背景上没有放置任何图像。
+
+```
+body { background-image: url(images/bg.gif); }
+```
+
+![](/assets/css-typeset-bg-image.png)
+
+现在，我们网页的背景就变为用图像填充的了。
+
+### 背景重复
+
+上例中，我们的背景图片 `bg.gif` 是一张 150\*150 大小的图片，但是它却铺满了整个文档区域，这是为什么呢？
+
+background-repeat 属性在控制这一切。默认情况下，它的取值是 `repeat`，即水平方向和垂直方向都重复背景。效果就如上例所示。它还有另外几个常见的取值：
+
+* `repeat-x`：背景图像在水平方向重复。
+
+* `repeat-y`：背景图像在垂直方向重复。
+
+* `no-repeat`：背景图像不重复。
+
+
+```
+.repeat { background-repeat: repeat; }
+.repeat-x { background-repeat: repeat-x; }
+.repeat-y { background-repeat: repeat-y; }
+.no-repeat { background-repeat: no-repeat; }
+```
+
+![](/assets/css-typeset-bg-image-repeat.png)
+
+### 背景定位
+
+我们还可以控制，图片在背景中的显示位置。这需要使用 `background-position` 属性。
+
+`background-position` 属性提供值有多种方法。
+
+**关键字**
+
+关键字定义位置很好理解，即利用 top，bottom，left，right 和 center 来定义位置。
+
+关键字一般成对出现，表示水平方向和垂直方向。如果只写了一个关键字，那么另一个关键字默认为 center。
+
+```
+.center { background-position: center; }
+.top { background-position: top; }
+.bottom { background-position: bottom; }
+.right { background-position: right; }
+.left { background-position: left; }
+```
+
+![](/assets/css-typeset-bg-image-position.png)
+
+**百分数值**
+
+百分数值的表现方式会相对复杂些，它同时应用于元素和图像，即图像本身\(x%, y%\)的那个点，与背景区域的\(x%, y%\)的那个点重合。比如
+
+```
+body { background-position: 50% 50%; }
+```
+
+这样设置后，背景图像会居中显示，图像的中心点\(50%, 50%\)与元素的中心点\(50%, 50%\)对齐。
+
+再来看个例子，深入理解下：
+
+```
+.per { background-position: 20% 30%; }
+```
+
+![](/assets/css_typeset_background_position_per.png)
+
+我们背景图是 150\*150 的，那么它的 \(20%, 30%\) 的点在 \(30px, 45px\) 的位置；我们背景区域是 200\*200，它的 \(20%, 30%\) 的点在 \(40, 60\) ，两个点对齐，最终背景图片就像上图那样呈现了。
+
+**长度值**
+
+长度值解释的是元素内边距区左上角的偏移。偏移点是图像的左上角。
+
+```
+.px { background-position: 10px 10px; }
+```
+
+![](/assets/css_typeset_background_position_px.png)
+
+如上图所示，图像左上角距离元素左上角的偏移为 \(10px, 10px\) 时，即为上图呈现的效果。
+
+### 背景关联
+
+如果文档比较长，那么当文档向下滚动时，背景图像也会随之滚动。当文档滚动到超过图像的位置时，图像就会消失。`background-attachment` 属性可以设置背景图像是否固定或者随着页面的其余部分滚动。
+
+常见的取值有：
+
+* `scroll`：默认值。背景图像会随着页面其余部分的滚动而移动。
+
+* `fixed`： 当页面的其余部分滚动时，背景图像不会移动。
+
+
+### 背景的简写属性
+
+我们可以把以上背景属性合在一起定义，而不用每次都单独写出来。
+
+如：
+
+```
+background-color: #f5f5f5;
+background-image: url(images/bg.gif);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: scroll;
+```
+
+以上这些属性，都可以合并起来一起写：
+
+```
+background: #f5f5f5 url(images/bg.gif) center scroll no-repeat;
+```
+
+而且，不需要每个值都指定。如果省略值得化，会自动使用默认值。如，上面的代码，其实与下面是等价的：
+
+```
+background: #f5f5f5 url(images/bg.gif) center no-repeat;
+```
 
 
 
