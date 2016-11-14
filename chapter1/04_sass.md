@@ -22,11 +22,11 @@ Sass 是最早的最成熟的 CSS 预处理器。Less 使用的是 CSS 的语法
 
 ### Sass 工作流程
 
-开发阶段（sass）
+1. 开发阶段：利用 Sass，编写样式（.scss\/.sass）
 
-sass 引擎 -&gt; css
+2. 开发完成后：使用 Sass 引擎将 sass 文件编译成 CSS（.css）
 
-部署 css 
+3. 部署阶段：将编译后的 CSS 文件引用到页面
 
-关键：输出css
 
+最终引用到页面的还是 CSS 文件，只不过在开发过程中，我们使用 Sass 代替 CSS 直接编写。
