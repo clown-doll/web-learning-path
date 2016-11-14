@@ -22,11 +22,42 @@ Sass 是最早的最成熟的 CSS 预处理器。Less 使用的是 CSS 的语法
 
 ### Sass 工作流程
 
-1. 开发阶段：利用 Sass，编写样式（.scss\/.sass）
+1. 开发阶段：利用 Sass，编写样式（`.scss`\/`.sass`）
 
-2. 开发完成后：使用 Sass 引擎将 sass 文件编译成 CSS（.css）
+2. 开发完成后：使用 Sass 引擎将 sass 文件编译成 CSS（`.css`）
 
 3. 部署阶段：将编译后的 CSS 文件引用到页面
 
 
 最终引用到页面的还是 CSS 文件，只不过在开发过程中，我们使用 Sass 代替 CSS 直接编写。
+
+### 语法
+
+Sass 有两种语法。
+
+第一种语法为缩排语法（或者就称为“Sass”），它提供了一种更简洁的 CSS 书写方式。它不使用花括号，而是通过缩排的方式来表达选择符的嵌套层级，而且也不使用分号，而是用换行符来分隔属性。使用此种语法的样式表文件需要以 `.sass` 作为扩展名。
+
+```
+//文件后缀名为sass的语法
+body
+  background-color: #f5f5f5
+  font-size: 12px
+p
+  color: #999
+```
+
+第二种被称为 SCSS（Sassy CSS），是一个 CSS3 语法的扩充版本。所有符合 CSS3 语法的样式表也都是具有相同语法意义的 SCSS 文件。另外， SCSS 理解大多数 CSS hacks 以及浏览器专属语法。这种语法的样式表文件需要以 `.scss` 为扩展名。
+
+```
+//文件后缀名为scss的语法  
+body {
+  background-color: #f5f5f5;
+  font-size:12px;
+}
+p{
+  color: #999;
+}
+```
+
+备注：sass从第三代开始，放弃了缩进式风格，并且完全向下兼容普通的css代码，也就是scss。
+
