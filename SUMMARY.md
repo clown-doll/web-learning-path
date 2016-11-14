@@ -42,7 +42,8 @@
     * [使用教程](chapter1/04_02_tutorials.md)
       * [变量](chapter1/04_02_01_variable.md)
       * [嵌套](chapter1/04_02_02_nesting.md)
-      * [混合](/chapter1/04_02_03_mixins.md)
+      * [混合](chapter1/04_02_03_mixins.md)
+      * [继承](/chapter1/04_02_04_extend.md)
 
 
 
