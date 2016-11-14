@@ -45,7 +45,8 @@
       * [混合](chapter1/04_02_03_mixins.md)
       * [继承](chapter1/04_02_04_extend.md)
       * [运算](chapter1/04_02_05_arithmetic.md)
-      * [函数](/chapter1/04_02_06_function.md)
+      * [函数](chapter1/04_02_06_function.md)
+      * [判断及循环语句](/chapter1/04_02_07_statement.md)
 
 
 
