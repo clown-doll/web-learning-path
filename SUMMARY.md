@@ -38,7 +38,8 @@
     * [盒模型](chapter1/03_05_box.md)
 
   * [sass使用指南](chapter1/04_sass.md)
-    * [安装](/chapter1/04_01_install.md)
+    * [安装](chapter1/04_01_install.md)
+    * [使用教程](/chapter1/04_02_tutorials.md)
 
 
 
