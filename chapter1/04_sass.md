@@ -22,3 +22,11 @@ Sass 是最早的最成熟的 CSS 预处理器。Less 使用的是 CSS 的语法
 
 ### Sass 工作流程
 
+开发阶段（sass）
+
+sass 引擎 -&gt; css
+
+部署 css 
+
+关键：输出css
+
