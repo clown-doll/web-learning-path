@@ -54,8 +54,9 @@
     * [如何在项目中使用Sass](chapter1/04_06_use.md)
 
   * [页面制作](chapter1/06_web.md)
-    * [基础切割包](/chapter1/06_01_prepare.md)
+    * [基础切割包](chapter1/06_01_prepare.md)
     * [审视PSD](chapter1/06_02_psd.md)
+    * [页面布局](/chapter1/06_03_layout.md)
 
 
 
