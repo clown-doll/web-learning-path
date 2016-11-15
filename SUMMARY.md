@@ -50,7 +50,8 @@
 
     * [编译](chapter1/04_03_compile.md)
     * [调试](chapter1/04_04_debug.md)
-    * [注意事项](/chapter1/04_05_tips.md)
+    * [注意事项](chapter1/04_05_tips.md)
+    * [如何在项目中使用sass](/chapter1/04_06_use.md)
 
 
 
