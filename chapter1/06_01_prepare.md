@@ -65,3 +65,5 @@ ol, ul { list-style: none; }
 h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal;}
 ```
 
+这样我们的准备工作就都完成了。
+
