@@ -48,7 +48,8 @@
       * [函数](chapter1/04_02_06_function.md)
       * [判断及循环语句](chapter1/04_02_07_statement.md)
 
-    * [编译](/chapter1/04_03_compile.md)
+    * [编译](chapter1/04_03_compile.md)
+    * [调试](/chapter1/04_04_debug.md)
 
 
 
