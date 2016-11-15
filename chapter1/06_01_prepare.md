@@ -24,4 +24,32 @@
 * pic 文件夹中存放页面切割中使用的内容性图片，如：广告图片，轮播图片等；
 
 
+### css 结构
+
+我们推荐使用 Sass 来进行样式书写。
+
+
+
+### 基础 HTML 代码
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="your name(number) | 2016-11-15">
+    <title>基础模板</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+</body>
+</html>
+```
+
+其中，`meta` 标签 `name` 值为 `author` 的部分，其 `content` 内容为：`姓名(工号) | 创建时间`。
 
