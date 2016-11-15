@@ -46,5 +46,6 @@
         * [调试](chapter1/04_04_debug.md)
         * [注意事项](chapter1/04_05_tips.md)
         * [如何在项目中使用Sass](chapter1/04_06_use.md)
-    * [页面制作](chapter1/页面制作.md)
+    * [页面制作](chapter1/06_web.md)
+        * [审视PSD](chapter1/06_01_prepare.md)
 
