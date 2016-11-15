@@ -49,7 +49,8 @@
       * [判断及循环语句](chapter1/04_02_07_statement.md)
 
     * [编译](chapter1/04_03_compile.md)
-    * [调试](/chapter1/04_04_debug.md)
+    * [调试](chapter1/04_04_debug.md)
+    * [注意事项](/chapter1/04_05_tips.md)
 
 
 
