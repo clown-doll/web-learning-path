@@ -10,5 +10,23 @@
 
 按照划分的5个区域，书写对应的 HTML 代码：
 
+```
+<!-- header -->
+<div class="header"></div>
+<!-- /header -->
+<!-- banner -->
+<div class="banner"></div>
+<!-- /banner -->
 
+<!-- container -->
+<div class="container">
+    <div class="sidebar"></div>
+    <div class="main"></div>
+</div>
+<!-- /container -->
+
+<!-- footer -->
+<div class="footer"></div>
+<!-- /footer -->
+```
 
