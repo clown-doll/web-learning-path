@@ -14,5 +14,5 @@
 
 我们统一以下面这个页面为例，贯穿后续课程的讲解。
 
-![](/assets/full_psd.jpg)
+![](/assets/web-layout-full.jpg)
 
