@@ -77,7 +77,7 @@ a:hover{ color:#cd5d00;}
 
 ## header 切割
 
-### 主体结构分析
+### 结构分析
 
 观察 PSD 可以看出，`header` 部分有一个渐变背景，并且结构上可以分为左边的 `logo` 和右边的 `nav` 两个模块。
 
@@ -180,7 +180,7 @@ CSS书写分析：
 
 CSS 书写分析：
 
-* 每个导航项对应一个 `<li>` 标签，每个 `<li>` 标签里有 `<a>` 标签作为链接。  
+* 每个导航项对应一个 `<li>` 标签，每个 `<li>` 标签里有 `<a>` 标签作为链接。
 
 * `<a>` 标签根据文字自适应宽度，文字大小为 18px，字体为“微软雅黑”。
 
@@ -190,8 +190,8 @@ CSS 书写分析：
 对应的 CSS 代码：
 
 ```
-.nav{ float: right; margin-top: 8px; width: 600px; text-align: right;}
-.nav li{ display: inline-block; padding-left: 46px; font-family: "Microsoft YaHei"; font-size: 18px; text-align: center; }
+.nav{ float: right; margin-top: 8px; width: 600px;}
+.nav li{ display: inline-block; padding-left: 46px; font-family: "Microsoft YaHei"; font-size: 18px;}
 .nav li a{ position: relative; display: block; padding: 28px 0;}
 .nav li a:hover:after,
 .nav .active a:after{ content: ""; display: block; position: absolute; bottom: 0; left: 50%; margin-left: -10px; width: 0; height: 0; border-style:solid; border-width: 10px;border-color: transparent transparent #f28f26 transparent; }
@@ -199,6 +199,126 @@ CSS 书写分析：
 ```
 
 这里补充说明下，之所以小三角图标不使用图片，主要是本着一个原则：能用样式控制的就不用图片。
+
+## flash切割
+
+从 PSD 来看，flash 模块只是一张全屏的广告图，所以只要把广告图保存下来，写入到页面中即可。
+
+对应的 HTML 代码：
+
+```
+<div class="flash">
+    <img src="pic/banner.jpg" alt="" width="1400" height="339">
+</div>
+```
+
+CSS 书写分析：
+
+* flash 模块的背景色为广告的背景色的延展，并且高度为图片的图片；
+
+* 图片需要居中显示；
+
+
+对应的 CSS 代码：
+
+```
+/*------------ flash ------------*/
+.flash{ height: 339px; background-color: #ffced4; text-align: center;}
+```
+
+## sidebar切割
+
+### 结构分析
+
+![](/assets/sidebar_bg1.jpg)
+
+由 PSD 可以看出，sidebar 可以分为 sidebar\_title 和 sidebar\_con 两大部分组成。
+
+对应的HTML代码：
+
+```
+<div class="sidebar">
+    <h3 class="sidebar-title">课程分类</h3>
+    <ul class="sidebar-con"></ul>
+</div>
+```
+
+### sidebar-title分析
+
+sidebar-title 背景图片是渐变的，并且文字具有阴影效果，鉴于此，我们这边直接将其切为图片（原则上：文字是不跟背景连在一起切的），即便如此，文字说明我们也不能省略。另外，既然是标题，那么我们就使用 h 标签来定义
+
+对应的 HTML 代码
+
+```
+<h3 class="sidebar-title">课程分类</h3>
+```
+
+CSS 书写分析：
+
+由于我们已经将标题跟背景切在一张图里，那么在样式上，我们就应该控制将我们定义的文字隐藏起来，不在浏览器中显示。
+
+对应的 CSS 代码：
+
+```
+.sidebar-title{ height: 60px; background: url(../image/bg-title.png) no-repeat 0 0; text-indent: -999em; overflow: hidden;}
+```
+
+### sidebar-con 分析
+
+![](/assets/sidebar_con_bg1.jpg)
+
+sidebar-con 由4个 &lt;li&gt; 构成，并且 &lt;li&gt; 打开项背景图片为白色，并且有一个向右的小三角。
+
+对应的HTML代码：
+
+```
+<ul class="sidebar-con">
+    <li>
+        <a href="#" title="">女职工操作手册</a>
+    </li>
+    <li class="active">
+        <a href="#" title="">女职工操作手册</a>
+    </li>
+    <li>
+        <a href="#" title="">女职工操作手册</a>
+    </li>
+    <li>
+        <a href="#" title="">女职工操作手册</a>
+    </li>
+</ul>
+```
+
+CSS 书写分析：
+
+侧边选项打开项的小三角的处理跟导航上小三角的处理一样，就不多说了。
+
+这里还需要注意的是边框的处理，列表项打开状态时，上下左右各有边框，为了鼠标经过选项时，不出现过多的抖动，在默认状态时，也会设置一个边框，只不过跟背景颜色一致，视觉上好像没有边框。
+
+对应的 CSS 代码：
+
+```
+.sidebar-con{ background-color: #fbeeda; border-bottom: 1px solid #f3d2a1;}
+.sidebar-con li{ height: 48px; line-height: 48px; }
+.sidebar-con li a{ position: relative; display: block; padding-left: 24px; border-style:solid; border-width: 1px; border-color: #fbeeda #f3d2a1 #fbeeda #f3d2a1;}
+.sidebar-con .active a,
+.sidebar-con li a:hover{ background-color: #fff; border-color: #f3d2a1 #fff #f3d2a1 #fe5d00; border-left-width: 2px;}
+.sidebar-con .active a:after,
+.sidebar-con li a:hover:after{ content: ""; display: block; position: absolute; top: 20px; left: 0; width: 0; height: 0; border-style:solid; border-width: 4px; border-color: transparent transparent transparent #fe5d00; }
+```
+
+## main切割
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
