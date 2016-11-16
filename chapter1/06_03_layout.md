@@ -12,7 +12,11 @@
 
 ```
 <!-- header -->
-<div class="header"></div>
+<div class="header">
+    <div class="wrapper">
+
+    </div>
+</div>
 <!-- /header -->
 <!-- banner -->
 <div class="banner"></div>
@@ -29,4 +33,10 @@
 <div class="footer"></div>
 <!-- /footer -->
 ```
+
+在 header 里面定义了一个名为 wrapper 的样式，是因为头部主体内容在 960px 内，我们用这个限制内容分布。
+
+对应前面主体结构的样式代码：
+
+
 
