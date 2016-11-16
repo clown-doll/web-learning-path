@@ -44,7 +44,7 @@
 
 在 `header` 里面定义了一个名为 `wrapper` 的样式，是因为头部主体内容在 `960px` 内，我们用这个限制内容分布。
 
-对应前面主体结构的样式代码：
+对应前面主体结构的 CSS 代码：
 
 ```
 /*------------ public ------------*/
@@ -115,16 +115,41 @@ CSS 书写分析：
 
 ![](/assets/logo.png)
 
-logo 这块主要由两部分组成：
+`logo` 这块主要由两部分组成：
 
-* logo 图片：由于 logo 不经常替换，所以这部分可以作为背景图片处理
+* logo 图片：由于 logo 不经常替换，所以这部分可以作为背景图片处理。其大小为 51\*57，整个 logo 部分的高度将参照图片高度。
 
-* 站点文字：分为上下两部分，项目名称及站点名称
-
-
-对应 HTML 代码：
+* 站点文字：分为上下两部分，项目名称及站点名称。
 
 
+由于通常 `logo` 都需要可点击，并且指向站点首页，所以，这块还需要为其填充 `<a>` 标签链接。
+
+对应的 HTML 代码：
+
+```
+<h2 class="logo">
+    <a href="#" title="福建终身教育-女职工周未学习网">
+        福建终身教育 
+        <strong>女职工周未学习网</strong>    
+    </a>
+</h2>
+```
+
+对应的 CSS 代码：
+
+```
+.logo{ float: left; width: 304px; background: url(../image/logo.png) no-repeat left center;}
+.logo a{ display: block; padding: 14px 0; height: 57px; padding-left: 59px;}
+.logo a strong{ display: block; font-size: 30px; font-family: "Microsoft YaHei"; font-weight: normal;}
+```
+
+### nav 结构分析
+
+![](/assets/nav_bg.jpg)
+
+`nav` 有5个导航地址组成，我们可以使用 `<ul>` 列表来组织对应的内容，并且里面都需要添加链接。每个连接都有打开的状态，可以为这个状态添加 `active` 样式。
+
+对应的 HTML 代码：
 
 
 
