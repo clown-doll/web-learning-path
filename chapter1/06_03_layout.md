@@ -6,7 +6,7 @@
 
 根据前面的分析，这个页面主体结构如下：
 
-![](/assets/full_psd2.jpg)
+![](/assets/web-layout-full1.jpg)
 
 按照划分的5个区域，书写对应的 HTML 代码：
 
@@ -81,7 +81,7 @@ a:hover{ color:#cd5d00;}
 
 观察 PSD 可以看出，`header` 部分有一个渐变背景，并且结构上可以分为左边的 `logo` 和右边的 `nav` 两个模块。
 
-![](/assets/header_bg1.jpg)
+![](/assets/web-layout-header.jpg)
 
 对应的 HTML 代码：
 
@@ -113,7 +113,7 @@ CSS 书写分析：
 
 ### logo 结构分析
 
-![](/assets/logo.png)
+![](/assets/web-layout-logo.jpg)
 
 `logo` 这块主要由两部分组成：
 
@@ -152,7 +152,7 @@ CSS书写分析：
 
 ### nav 结构分析
 
-![](/assets/nav_bg.jpg)
+![](/assets/web-layout-nav.jpg)
 
 `nav` 有5个导航地址组成，我们可以使用 `<ul>` 列表来组织对应的内容，并且里面都需要添加链接。每个连接都有打开的状态，可以为这个状态添加 `active` 样式。
 
@@ -230,7 +230,7 @@ CSS 书写分析：
 
 ### 结构分析
 
-![](/assets/sidebar_bg1.jpg)
+![](/assets/web-layout-sidebar.jpg)
 
 由 PSD 可以看出，sidebar 可以分为 sidebar\_title 和 sidebar\_con 两大部分组成。
 
@@ -265,7 +265,7 @@ CSS 书写分析：
 
 ### sidebar-con 分析
 
-![](/assets/sidebar_con_bg1.jpg)
+![](/assets/web-layout-sidebar-con.jpg)
 
 sidebar-con 由4个 &lt;li&gt; 构成，并且 &lt;li&gt; 打开项背景图片为白色，并且有一个向右的小三角。
 
@@ -310,7 +310,7 @@ CSS 书写分析：
 
 ### 结构分析
 
-![](/assets/main_bg1.jpg)
+![](/assets/web-layout-main.jpg)
 
 由 PSD 可以看出 main 可以由上半部分的 main-title 和下半部分的 main-con 两部分组成。
 
@@ -335,7 +335,7 @@ main-title 文字为24px、微软雅黑，底部边框为渐变过渡色，因�
 
 ### main-con 分析
 
-![](/assets/main_con1.jpg)
+![](/assets/web-layout-mian-con.jpg)
 
 main-con由上半部分的列表 main-list 和下半部分的分页 main-page 两个部分组成。
 
@@ -350,11 +350,11 @@ main-con由上半部分的列表 main-list 和下半部分的分页 main-page �
 
 **main-list 分析**
 
-![](/assets/main_list1.jpg)
+![](/assets/web-layout-mian-list.jpg)
 
 main-list 由9个结构相同的小模块组成，每个模块左浮动，自动排列。
 
-![](/assets/li_bg1.jpg)
+![](/assets/web-layout-main-list-item.jpg)
 
 每个 &lt;li&gt; 由带图片和文字标题的链接，以及底部的播放次数两个部分构成。
 
