@@ -56,7 +56,8 @@
   * [页面制作](chapter1/06_web.md)
     * [基础切割包](chapter1/06_01_prepare.md)
     * [审视PSD](chapter1/06_02_psd.md)
-    * [页面布局](/chapter1/06_03_layout.md)
+    * [页面布局](chapter1/06_03_layout.md)
+    * [基础优化](/chapter1/06_04_optimize.md)
 
 
 
