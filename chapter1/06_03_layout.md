@@ -117,9 +117,9 @@ CSS 书写分析：
 
 `logo` 这块主要由两部分组成：
 
-* logo 图片：由于 logo 不经常替换，所以这部分可以作为背景图片处理。其大小为 51\*57，整个 logo 部分的高度将参照图片高度。
+* logo 图片
 
-* 站点文字：分为上下两部分，项目名称及站点名称。
+* 站点文字
 
 
 由于通常 `logo` 都需要可点击，并且指向站点首页，所以，这块还需要为其填充 `<a>` 标签链接。
@@ -134,6 +134,13 @@ CSS 书写分析：
     </a>
 </h2>
 ```
+
+CSS书写分析：
+
+* logo 图片不经常替换，所以这部分可以作为背景图片处理。其大小为 51\*57，整个 logo 部分的高度将参照图片高度。
+
+* 文字分为上下两部分，项目名称及站点名称。上部分文字为宋体、14px，下部分文字为微软雅黑、30px。
+
 
 对应的 CSS 代码：
 
@@ -150,6 +157,48 @@ CSS 书写分析：
 `nav` 有5个导航地址组成，我们可以使用 `<ul>` 列表来组织对应的内容，并且里面都需要添加链接。每个连接都有打开的状态，可以为这个状态添加 `active` 样式。
 
 对应的 HTML 代码：
+
+```
+<ul class="nav">
+    <li>
+        <a href="#" title="">首页</a>
+    </li>
+    <li>
+        <a href="#" title="">课程推荐</a>
+    </li>
+    <li class="active">
+        <a href="#" title="">课程分类</a>
+    </li>
+    <li>
+        <a href="#" title="">新闻公告</a>
+    </li>
+    <li>
+        <a href="#" title="">关注女职工</a>
+    </li>
+</ul>
+```
+
+CSS 书写分析：
+
+* 每个导航项对应一个 `<li>` 标签，每个 `<li>` 标签里有 `<a>` 标签作为链接。  
+
+* `<a>` 标签根据文字自适应宽度，文字大小为 18px，字体为“微软雅黑”。
+
+* 导航的选中项底部有个小三角图标，利用样式实现
+
+
+对应的 CSS 代码：
+
+```
+.nav{ float: right; margin-top: 8px; width: 600px; text-align: right;}
+.nav li{ display: inline-block; padding-left: 46px; font-family: "Microsoft YaHei"; font-size: 18px; text-align: center; }
+.nav li a{ position: relative; display: block; padding: 28px 0;}
+.nav li a:hover:after,
+.nav .active a:after{ content: ""; display: block; position: absolute; bottom: 0; left: 50%; margin-left: -10px; width: 0; height: 0; border-style:solid; border-width: 10px;border-color: transparent transparent #f28f26 transparent; }
+.nav .active a{ color: #cd5d00; }
+```
+
+这里补充说明下，之所以小三角图标不使用图片，主要是本着一个原则：能用样式控制的就不用图片。
 
 
 
