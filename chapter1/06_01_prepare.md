@@ -58,11 +58,20 @@ table { border-collapse: collapse; border-spacing: 0; }
 ins{ text-decoration: none;}
 del{ text-decoration: line-through;}
 input,select{ vertical-align:middle;}
-input,textarea,select{font:12px/1.5 "microsoft yahei", Arial, sans-serif;}
+input,textarea,select{font:12px/1.5 "Microsoft YaHei", Arial, sans-serif;}
 fieldset, img { border: 0; }
 address,code,th,em{font-style:normal;}
 ol, ul { list-style: none; }
 h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal;}
+```
+
+### 常用基本样式
+
+```
+/* clear float */
+.clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix{ zoom:1;}
+.clear { clear:both;}
 ```
 
 这样我们的准备工作就都完成了。
