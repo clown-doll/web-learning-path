@@ -243,7 +243,7 @@ CSS 书写分析：
 </div>
 ```
 
-### sidebar-title分析
+### sidebar-title 分析
 
 sidebar-title 背景图片是渐变的，并且文字具有阴影效果，鉴于此，我们这边直接将其切为图片（原则上：文字是不跟背景连在一起切的），即便如此，文字说明我们也不能省略。另外，既然是标题，那么我们就使用 h 标签来定义
 
@@ -308,17 +308,47 @@ CSS 书写分析：
 
 ## main切割
 
+### 结构分析
 
+![](/assets/main_bg1.jpg)
 
+由 PSD 可以看出 main 可以由上半部分的 main-title 和下半部分的 main-con 两部分组成。
 
+对应的HTML代码：
 
+```
+<div class="main">
+    <h3 class="main-title">女职工安全规范</h3>
+    <div class="main-con"></div>
+</div>
+```
 
+### main-title 分析
 
+main-title 文字为24px、微软雅黑，底部边框为渐变过渡色，因此这部分我们将其切为图片，作为背景处理。
 
+对应的CSS代码：
 
+```
+.main-title{ padding: 0 0 8px 4px; background: url(../image/line.png) no-repeat bottom center; font-size: 24px; font-family: "Microsoft YaHei"; line-height: 1;}
+```
 
+### main-con 分析
 
+![](/assets/main_con1.jpg)
 
+main-con由上半部分的列表 main-list 和下半部分的分页 main-page 两个部分组成。
 
+对应的 HTML 代码：
 
+```
+<div class="main-con">
+    <ul class="main-list"></ul>
+    <div class="main-page"></div>
+</div>
+```
+
+**main-list 分析**
+
+![](/assets/main_list1.jpg)
 
