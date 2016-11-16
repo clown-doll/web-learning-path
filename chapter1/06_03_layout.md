@@ -191,7 +191,7 @@ CSS 书写分析：
 
 ```
 .nav{ float: right; margin-top: 8px; width: 600px;}
-.nav li{ display: inline-block; padding-left: 46px; font-family: "Microsoft YaHei"; font-size: 18px;}
+.nav li{ display: inline-block; *display: inline; *zoom: 1; padding-left: 46px; font-family: "Microsoft YaHei"; font-size: 18px;}
 .nav li a{ position: relative; display: block; padding: 28px 0;}
 .nav li a:hover:after,
 .nav .active a:after{ content: ""; display: block; position: absolute; bottom: 0; left: 50%; margin-left: -10px; width: 0; height: 0; border-style:solid; border-width: 10px; border-color: transparent transparent #f28f26 transparent; }
@@ -298,7 +298,7 @@ CSS 书写分析：
 ```
 .sidebar-con{ background-color: #fbeeda; border-bottom: 1px solid #f3d2a1;}
 .sidebar-con li{ height: 48px; line-height: 48px; }
-.sidebar-con li a{ position: relative; display: block; padding-left: 24px; border-style:solid; border-width: 1px; border-color: #fbeeda #f3d2a1 #fbeeda #f3d2a1;}
+.sidebar-con li a{ position: relative; display: block; height: 48px; padding-left: 24px; border-style:solid; border-width: 1px; border-color: #fbeeda #f3d2a1 #fbeeda #f3d2a1;}
 .sidebar-con .active a,
 .sidebar-con li a:hover{ background-color: #fff; border-color: #f3d2a1 #fff #f3d2a1 #fe5d00; border-left-width: 2px;}
 .sidebar-con .active a:after,
@@ -426,7 +426,7 @@ CSS 书写分析：
 .main-page a:hover,
 .main-page span{ border: 1px solid #f1a000; background-color: #f1a000;}
 .main-page a,
-.main-page span{ margin: 0 4px; padding: 5px 10px; font-size: 12px; color: #434242;}
+.main-page span{ display: inline-block; *display: inline; *zoom: 1; margin: 0 4px; padding: 0 10px; height: 22px; line-height: 22px; font-size: 12px; color: #434242;}
 ```
 
 ## footer 切割
