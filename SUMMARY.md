@@ -36,7 +36,7 @@
     * [继承、层叠和特殊性](chapter1/03_03_inherit.md)
     * [格式化排版](chapter1/03_04_typeset.md)
     * [盒模型](chapter1/03_05_box.md)
-    * [CSS编码规范](/chapter1/03_08_norm.md)
+    * [CSS编码规范](chapter1/03_08_norm.md)
 
   * [Sass使用指南](chapter1/04_sass.md)
     * [安装](chapter1/04_01_install.md)
@@ -55,10 +55,14 @@
     * [如何在项目中使用Sass](chapter1/04_06_use.md)
 
   * [页面制作](chapter1/06_web.md)
-    * [基础切割包](chapter1/06_01_prepare.md)
-    * [审视PSD](chapter1/06_02_psd.md)
-    * [页面布局](chapter1/06_03_layout.md)
-    * [基础优化](chapter1/06_04_optimize.md)
+    * [web端页面](chapter1/06_01_web.md)
+      * [基础切割包](/chapter1/06_01_01_prepare.md)
+      * [审视PSD](/chapter1/06_01_02_psd.md)
+      * [页面布局](/chapter1/06_01_03_layout.md)
+      * [基础优化](/chapter1/06_01_04_optimize.md)
+      * 2
+
+    * 移动端页面切割
 
 
 
