@@ -104,5 +104,41 @@ CSS 包含 3 种基本布局模型：
 </html>
 ```
 
+按常理，两个块级元素 `div` ，应该是独占一行，像这样显示的：
 
+![](/assets/css_layout_float1.png)
+
+但是在上面的例子，我们给 `div` 设置了 `float: left` 样式，它便这样显示了：
+
+![](/assets/css_layout_float2.png)
+
+两个块级元素在同行显示了。
+
+但是大家有没有发现一个问题：它们的父级元素，高度居然没有被撑开，上下边框贴在一起了。这又是为什么呢？
+
+这是由于，浮动元素会脱离普通的文档流，所以页面普通流中的块框表现得就像浮动框不存在一样。显然这会影响我们正常布局。不过不用担心，我们也有对应的解决办法，那就是给对应的元素清除浮动。
+
+通常，我们会在浮动元素的父级元素进行清除浮动。
+
+以下是清除浮动的代码：
+
+```
+/* clear float */
+.clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix{ zoom:1;}
+.clear { clear:both;}
+```
+
+通常我们只用 clearfix 就可以满足清浮动的需求。我们将上面的例子改动下：
+
+```
+<div class="wrapper clearfix">
+    <div class="inner"></div>
+    <div class="inner"></div>
+</div>
+```
+
+在外层父级元素上应用 clearfix 样式，于是两个浮动块就正常显示了：
+
+![](/assets/css_layout_float_clear.png)
 
