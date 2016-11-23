@@ -36,7 +36,7 @@
     * [继承、层叠和特殊性](chapter1/03_03_inherit.md)
     * [格式化排版](chapter1/03_04_typeset.md)
     * [盒模型](chapter1/03_05_box.md)
-    * [定位](/chapter1/03_06_position.md)
+    * [布局模型](/chapter1/03_06_layout.md)
     * [CSS编码规范](chapter1/03_08_norm.md)
 
   * [Sass使用指南](chapter1/04_sass.md)
