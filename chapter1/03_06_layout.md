@@ -142,3 +142,61 @@ CSS 包含 3 种基本布局模型：
 
 ![](/assets/css_layout_float_clear.png)
 
+还需要补充一点的是，块级元素通过 `float` 样式的设置，可以向左浮动，像上面的例子那样，也可以向右浮动，只需要将 `float` 的值设置为 `right` 即可。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局模型 - 浮动布局模型</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .wrapper{
+            width: 300px;
+            border: 1px dashed red;
+        }
+
+        .fr{
+            float: right;
+        }
+        .fl{
+            float: left;
+        }
+
+        div.inner {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: red;
+            line-height: 100px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* clear float */
+        .clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+        .clearfix{ zoom:1;}
+        .clear { clear:both;}
+    </style>
+</head>
+<body>
+
+    <div class="wrapper clearfix">
+        <div class="inner fl">
+            float: left
+        </div>
+        <div class="inner fr">
+            float: right
+        </div>
+    </div>
+</body>
+</html>
+```
+
+![](/assets/css_layout_float3.png)
+
+## 层模型
+
+稍等
+
