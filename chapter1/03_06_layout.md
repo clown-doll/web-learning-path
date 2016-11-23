@@ -71,7 +71,38 @@ CSS 包含 3 种基本布局模型：
 
 所谓的浮动模型，是利用 `float` 属性，将块级元素定义为浮动。浮动元素能像内联元素一样，在同一行显示。
 
+我们一起看一个例子：
 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局模型 - 浮动布局模型</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .wrapper{
+            width: 300px;
+            border: 1px dashed red;
+        }
+
+        div.inner {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
+```
 
 
 
