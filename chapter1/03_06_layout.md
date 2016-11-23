@@ -210,11 +210,68 @@ CSS 包含 3 种基本布局模型：
 
 
 用 CSS 设置完对应的模式外，还需要利用 `left`、`right`、`top`、`bottom` 属性对齐进行位置定义。
+
 ## 绝对定位
 
 绝对定位的元素，其位置跟文档流也无关了，不占据文档空间。
 
 它的位置是相对于最近的已定位祖先元素。如果没有已定位的祖先元素，那么它的位置会相对于最初的包含块（通常来说是 `body` 元素）。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局模型 - 绝对定位</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* clear float */
+        .clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+        .clearfix{ zoom:1;}
+        .clear { clear:both;}
+
+        .wrapper{
+            position: relative;
+            border: 1px dashed red;
+            width: 300px;
+        }
+        .fl{
+            float: left;
+        }
+        .div{
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .absolute{
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            background-color: red;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <div class="div fl">
+            1
+        </div>
+        <div class="div fl">
+            2
+        </div>
+        <div class="div absolute">
+            3
+        </div>
+    </div>
+    <div class="div absolute">4</div>
+</body>
+</html>
+```
+
+![](/assets/css_layout_absolute.png)
 
 
 
