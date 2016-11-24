@@ -48,7 +48,7 @@
         * [调试](chapter1/04_04_debug.md)
         * [注意事项](chapter1/04_05_tips.md)
         * [如何在项目中使用Sass](chapter1/04_06_use.md)
-    * [页面制作](chapter1/06_cutting.md)
+    * [页面切割](chapter1/06_cutting.md)
         * [web端页面](chapter1/06_01_web.md)
             * [基础切割包](chapter1/06_01_01_prepare.md)
             * [审视PSD](chapter1/06_01_02_psd.md)
