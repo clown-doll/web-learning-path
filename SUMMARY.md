@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [前言](preface.md)
-* [第一阶段 页面切割](chapter1/00_intro.md)
+* [第一阶段 页面制作](chapter1/00_intro.md)
     * [编程工具](chapter1/01_tools.md)
         * [Sublime Text](chapter1/01_01_01_intro.md)
             * [安装Sublime Text](chapter1/01_01_02_install_sb.md)
