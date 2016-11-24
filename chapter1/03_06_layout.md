@@ -281,3 +281,52 @@ CSS 包含 3 种基本布局模型：
 
 相对定位完成的过程是首先按 static\(float\) 方式生成一个元素\(并且元素像层一样浮动了起来\)，然后相对于以前的位置移动，移动的方向和幅度由属性确定，偏移前的位置保留不动。
 
+偏移前的位置保留不动的意思是：div 元素偏移之前的那个位置，在设置了偏移以后，并没有消失，还是占有一部分的页面空间，只是不显示了，就相当于原先的那个位置存在这一个 div 大小的、虽然没有被显示但是真是存在的元素。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局模型 - 绝对定位</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* clear float */
+        .clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+        .clearfix{ zoom:1;}
+        .clear { clear:both;}
+
+        .wrapper{
+            border: 1px dashed red;
+            width: 200px;
+        }
+        .div{
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+        .relative{
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: red;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <div class="div relative">
+            1
+        </div>
+    </div>
+</body>
+</html>
+```
+
+![](/assets/css_layout_relative.png)
+
+如图所示，相对定位的元素是处于正常文档流中的，偏移前的位置保留不动。 
+
+
+
