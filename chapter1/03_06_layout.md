@@ -288,14 +288,9 @@ CSS 包含 3 种基本布局模型：
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>布局模型 - 绝对定位</title>
+    <title>布局模型 - 相对定位</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* clear float */
-        .clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
-        .clearfix{ zoom:1;}
-        .clear { clear:both;}
-
         .wrapper{
             border: 1px dashed red;
             width: 200px;
@@ -319,6 +314,7 @@ CSS 包含 3 种基本布局模型：
         <div class="div relative">
             1
         </div>
+        div1 偏移之前的那个位置，并没有消失，还是占有一部分的页面空间。
     </div>
 </body>
 </html>
@@ -326,7 +322,48 @@ CSS 包含 3 种基本布局模型：
 
 ![](/assets/css_layout_relative.png)
 
-如图所示，相对定位的元素是处于正常文档流中的，偏移前的位置保留不动。 
+如图所示，相对定位的元素是处于正常文档流中的，偏移前的位置保留不动。
 
+## 固定定位
 
+固定定位的相对位移是根据屏幕的网页窗口而定的。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局模型 - 固定定位</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .wrapper{
+            border: 1px dashed red;
+            width: 200px;
+            height: 800px;
+        }
+        .div{
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+        .fixed{
+            position: fixed;
+            top: 20px;
+            left: 30px;
+            background-color: yellow;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <div class="div fixed"></div>
+    </div>
+</body>
+</html>
+```
+
+![](/assets/css_layout_fixed.gif)
+
+如上图所示，滚动条向下滚动，黄色元素位置固定不变。
 
