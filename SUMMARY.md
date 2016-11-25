@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [前言](preface.md)
-* [第二阶段 页面基础交互实现](chapter2/01_intro.md)
 * [第一阶段 页面制作](chapter1/00_intro.md)
     * [编程工具](chapter1/01_tools.md)
         * [Sublime Text](chapter1/01_01_01_intro.md)
@@ -60,4 +59,5 @@
             * [基础切割包](chapter1/06_05_02_prepare.md)
             * [案例说明](chapter1/06_05_03_demo.md)
     * [基于MiKit的切割工作流](chapter1/07_mikit.md)
+* [第二阶段 页面基础交互实现](chapter2/01_intro.md)
 
