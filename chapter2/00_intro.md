@@ -6,3 +6,7 @@ JavaScript 比 HTML 和 CSS 相对更难学习，因此在尝试学习 JavaScrip
 
 当然，虽然 JavaScript 相对比较难，但也不是一件特别可怕的事情，大家不必对此心存畏惧。不过， JavaScript 学习，需要大家拿出更多的时间去实践，去写代码，在不段 coding 中成长。
 
+我们的学习将分为以下模块：
+
+
+
