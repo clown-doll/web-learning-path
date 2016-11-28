@@ -60,22 +60,64 @@ function updateName() {
 
 （注：如果现在大家看不懂上面的代码，并没有关系，只要清楚 JavaScript 到底能做什么即可。）
 
-我们的课程将分为以下几个模块：
+### 在页面中引入 JavaScrip 
 
-* 基本概念
+JavaScript 在 HTML 页面中的引用跟 CSS 类似，不过，它利用的是 `<script>` 标签。
 
-* 数组
+**内部 JavaScript**
 
-* 函数
+内部 JavaScript 是指将代码写在开始标签 `<script>` 和结束标签之间 &lt;\/script&gt; ，并且放置于网页 `</body>` 前。前面的例子，我们引用的就是内部 JavaScript 。
 
-* 对象
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        // javascript code ...
+    </script>
+</body>
+</html>
+```
 
-* 内置对象
+**外部 JavaScript**
 
-* BOM
+更普遍的做法是将 JavaScript 放在一个外部文件中，这个外部文件的扩展名是 `.js` 。
 
-* DOM
+新建一个文件，保存为 `script.js` （需确保我们的外部文件都是以 `.js` 为扩展名）。同样是利用 `<script>` 标签，只不是现在我们需要用到它的 `src` 属性，将我们保存的 `.js` 的引用路径放置在 `src` 属性中即可。
 
-* 事件
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>
+```
 
+**内嵌 JavaScript 处理程序**
+
+有时候我们可能也会遇到这种情况：
+
+```
+function updateName() {
+    var name = prompt('请输入一个新名字');
+    para.textContent = '姓名：' + name;
+}
+```
+
+```
+<button onclick="updateName()">点击更新</button>
+```
+
+这种方法是在 HTML 中嵌入 JavaScript 处理程序，该事件处理程序通常由 `onclick` 或 `onmouseover` 这样的 HTML 属性值指定它。
+
+我们提倡 HTML、CSS 和 JavaScript 分离，因此这种内嵌的做法是不推荐的。
 
