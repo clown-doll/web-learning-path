@@ -61,5 +61,6 @@
             * [案例说明](chapter1/06_05_03_demo.md)
     * [基于MiKit的切割工作流](chapter1/07_mikit.md)
 * [第二阶段 页面基础交互实现](chapter2/00_intro.md)
-    * [JavaScript 基础](chapter2/01_javascript.md)
+    * [JavaScript 入门](chapter2/01_javascript.md)
+        * [语法](chapter2/01_01_grammar.md)
 
