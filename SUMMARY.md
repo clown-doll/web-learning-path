@@ -48,6 +48,7 @@
        * [调试](chapter1/04_04_debug.md)
        * [注意事项](chapter1/04_05_tips.md)
        * [如何在项目中使用Sass](chapter1/04_06_use.md)
+   * PS 基础
    * [页面切割](chapter1/06_cutting.md)
        * [web端页面](chapter1/06_01_web.md)
            * [基础切割包](chapter1/06_01_01_prepare.md)
@@ -59,6 +60,5 @@
            * [基础切割包](chapter1/06_05_02_prepare.md)
            * [案例说明](chapter1/06_05_03_demo.md)
    * [基于MiKit的切割工作流](chapter1/07_mikit.md)
-   * PS 基础
 * [第二阶段 页面基础交互实现](chapter2/00_intro.md)
 
