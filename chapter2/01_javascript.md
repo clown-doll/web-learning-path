@@ -60,7 +60,7 @@ function updateName() {
 
 （注：如果现在大家看不懂上面的代码，并没有关系，只要清楚 JavaScript 到底能做什么即可。）
 
-### 在页面中引入 JavaScrip 
+### 在页面中引入 JavaScrip
 
 JavaScript 在 HTML 页面中的引用跟 CSS 类似，不过，它利用的是 `<script>` 标签。
 
@@ -119,5 +119,5 @@ function updateName() {
 
 这种方法是在 HTML 中嵌入 JavaScript 处理程序，该事件处理程序通常由 `onclick` 或 `onmouseover` 这样的 HTML 属性值指定它。
 
-我们提倡 HTML、CSS 和 JavaScript 分离，因此这种内嵌的做法是不推荐的。
+我们提倡 HTML、CSS 和 JavaScript 分离，减少耦合度，因此这种内嵌的做法是不推荐的。
 
