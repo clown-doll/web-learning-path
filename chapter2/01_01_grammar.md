@@ -89,5 +89,7 @@ function doSomething () {
 }
 ```
 
+支持严格模式的浏览器有：IE10+、Firefox 4+、Safari 5.1+、Opera 12+ 和 Chrome。
 
+在不支持严格模式的浏览器下，会直接忽略这条语句，所以并没有太大影响。
 
