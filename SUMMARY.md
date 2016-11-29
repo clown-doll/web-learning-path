@@ -63,8 +63,6 @@
 * [第二阶段 页面基础交互实现](chapter2/00_intro.md)
     * [JavaScript 入门](chapter2/01_javascript.md)
         * [语法](chapter2/01_01_grammar.md)
-        * [数据类型](chapter2/01_02_type.md)
         * [变量](chapter2/01_03_variable.md)
-
------
+        * [数据类型](chapter2/01_02_type.md)
 
