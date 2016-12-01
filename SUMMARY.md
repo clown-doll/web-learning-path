@@ -65,4 +65,7 @@
         * [语法](chapter2/01_01_grammar.md)
         * [变量](chapter2/01_03_variable.md)
         * [数据类型](chapter2/01_02_type.md)
+        * [表达式和运算符](chapter2/01_04_expression_operators.md)
+
+-----
 
