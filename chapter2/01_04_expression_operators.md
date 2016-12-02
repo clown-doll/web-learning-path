@@ -279,7 +279,7 @@ console.log(void 0);  // undefined
 
 加性操作符包括加法和减法。
 
-**加法**
+**加法运算符**
 
 如果两个运算符都是数值，执行常规的加法计算，然后根据下列规则返回结果：
 
@@ -309,6 +309,63 @@ console.log(void 0);  // undefined
 * 如果是 null 加 null，则结果是 0；
 
 * 如果是 undefined 加 undefined，则结果是 NaN；
+
+
+```
+var result1 = 5 + 5;            // 两个数值相加
+console.log(result1);           // 10
+
+var result2 = 5 + "5";          // 一个数值和一个字符串相加
+console.log(result2);           // "55"
+
+var num1 = 5;
+var num2 = 10;
+var message = "The sum of 5 and 10 is " + num1 + num2;
+console.log(message);   // "The sum of 5 and 10 is 510" 
+```
+
+**减法运算符**
+
+如果两个运算符都是数值，执行常规的减法计算，然后根据下列规则返回结果：
+
+* 如果有一个操作数是 NaN，则结果是 NaN；
+
+* 如果是 Infinity 减 Infinity，则结果是 NaN；
+
+* 如果是 -Infinity 减 -Infinity，则结果是 NaN；
+
+* 如果是 Infinity 减 -Infinity，则结果是 Infinity；
+
+* 如果是 -Infinity 减 Infinity，则结果是 -Infinity；
+
+* 如果是 +0 减 +0，则结果是 +0；
+
+* 如果是 +0 减 -0，则结果是 -0；
+
+* 如果是 -0 减 -0，则结果是 +0；
+
+
+如果有一个操作数不是数值，那么就要应用如下规则：
+
+* 如果有一个操作数是字符串、布尔值、null 或 undefined，则先在后台调用 Number\(\) 函数将其转换为数值，然后再根据前面的规则执行减法计算。如果转换的结果是 NaN，则减法的结果就是 NaN；
+
+* 如果有一个操作数是对象，则调用对象的 valueOf\(\) 方法以取得表示该对象的数值。如果得到的值是 NaN，则减法的结果就是 NaN。如果对象没有 valueOf\(\) 方法，则调用其 toString\(\)方法并将得到的字符串转换为数值。
+
+* 如果是 null 减 null，则结果是 0；
+
+* 如果是 undefined 减 undefined，则结果是 NaN；
+
+
+```
+console.log(5 - true);  // 4，因为true被转换成了1
+console.log(NaN - 1);  // NaN
+console.log(5 - 3);  // 2
+console.log(5 - "");  // 5，因为"" 被转换成了0
+console.log(5 - "2");  // 3，因为"2"被转换成了2
+console.log(5 - null);  // 5，因为null被转换成了0
+```
+
+### 关系操作符
 
 
 
