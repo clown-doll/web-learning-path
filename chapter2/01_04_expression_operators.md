@@ -148,7 +148,7 @@ i = i + 1;
 
 **一元加和一元减**
 
-一元加即一个加号（+），本质上他对数组无任何影响，如：
+一元加即一个加号（`+`），本质上他对数组无任何影响，如：
 
 ```
 var a = 10;
@@ -170,7 +170,7 @@ console.log(typeof a);  // "string"
 
 注意，最后打印变量 a 的类型，还是 "string" ，这是由于字符串的特殊性，即它是不可变的，一旦创建就不能改变。
 
-一元减即一个减号（-），其本质就是对数字求负值：
+一元减即一个减号（`-`），其本质就是对数字求负值：
 
 ```
 var a = 1;
@@ -189,7 +189,7 @@ console.log(typeof b);  // "number"
 
 **delete**
 
-delete 运算符用于删除对象属性或者数组元素，如果删除成功或所删除对象不存在，将返回true。如：
+`delete` 运算符用于删除对象属性或者数组元素，如果删除成功或所删除对象不存在，将返回true。如：
 
 ```
 var o = {};
@@ -204,12 +204,14 @@ console.log(delete o.age);  // true
 
 **void**
 
-void 运算符对任何值返回 undefined。该运算符的作用如下：
+`void` 运算符对任何值返回 undefined。该运算符的作用如下：
 
 * 通过采用 `void 0` 取 `undefined` 比采用字面上的 `undefined` 更靠谱更安全，应该优先采用 `void 0` 这种方式。
 
 * 填充 `<a>` 的 `href` 确保点击时不会产生页面跳转；填充`<image>` 的 `src`，确保不会向服务器发出垃圾请求。
 
+
+如下面例子
 
 ```
 console.log(typeof void 0);  // undefined
@@ -224,7 +226,7 @@ console.log(void 0);  // undefined
 
 **乘法**
 
-乘法运算符由星号（\*）表示。乘法操作符遵循以下规则：
+乘法运算符由星号（`*`）表示。乘法操作符遵循以下规则：
 
 * 如果操作数都是数值，执行常规的乘法计算，即两个正数或两个负数相乘的结果还是正数，而如果只有一个操作数有符号，那么结果就是负数。如果乘积超过了 JavaScript 数值的表示范围，则返回 Infinity 或 -Infinity；
 
@@ -239,7 +241,7 @@ console.log(void 0);  // undefined
 
 **除法**
 
-除法运算符由斜线（\/）表示。除法操作符遵循以下规则：
+除法运算符由斜线（`/`）表示。除法操作符遵循以下规则：
 
 * 如果操作数都是数值，执行常规的除法计算，即两个正数或两个负数相除的结果还是正数，而如果只有一个操作数有符号，那么结果就是负数。如果商超过了 JavaScript 数值的表示范围，则返回 Infinity 或 -Infinity；
 
@@ -258,7 +260,7 @@ console.log(void 0);  // undefined
 
 **求模运算符**
 
-求模运算符由百分号（%）表示。求模操作符遵循以下规则：
+求模运算符由百分号（`%`）表示。求模操作符遵循以下规则：
 
 * 如果操作数都是数值，执行常规的除法计算，返回除得的余数；
 
@@ -311,6 +313,8 @@ console.log(void 0);  // undefined
 * 如果是 undefined 加 undefined，则结果是 NaN；
 
 
+来看下面例子
+
 ```
 var result1 = 5 + 5;            // 两个数值相加
 console.log(result1);           // 10
@@ -356,6 +360,8 @@ console.log(message);   // "The sum of 5 and 10 is 510"
 * 如果是 undefined 减 undefined，则结果是 NaN；
 
 
+来看下面例子
+
 ```
 console.log(5 - true);  // 4，因为true被转换成了1
 console.log(NaN - 1);  // NaN
@@ -367,7 +373,7 @@ console.log(5 - null);  // 5，因为null被转换成了0
 
 ### 关系操作符
 
-关系操作符有：小于（&lt;）、大于（&gt;）、小于等于（&lt;=）和大于等于（&gt;=），它们都返回一个布尔值。
+关系操作符有：小于（`<`）、大于（`>`）、小于等于（`<=`）和大于等于（`>=`），它们都返回一个布尔值。
 
 如果关系操作符遵循以下规则：
 
@@ -381,6 +387,8 @@ console.log(5 - null);  // 5，因为null被转换成了0
 
 * 如果一个操作数是布尔值，则先将其转换为数值，然后再执行比较。
 
+
+来看下面例子
 
 ```
 console.log("Brick" < "alphabet");  // true
@@ -426,9 +434,92 @@ console.log(a instanceof RegExp);  // false，数组不是正则表达式
 
 ### 相等操作符
 
-有两组操作符：相等和不想等（先转换再比较）；全等和不全等（仅比较不转换）。
+有两组操作符：相等和不相等（先转换再比较）；全等和不全等（仅比较不转换）。
 
-**相等和不想等**
+**相等和不相等**
+
+相等（`==`）和不相等（`!=`）在转换不同的数据类型时，遵循下列基本规则：
+
+* 如果有一个操作数是布尔值，则在比较相等性之前先将其转换为数值（false 转换为 0，而 true 转换为 1）；
+
+* 如果一个操作数是字符串，另一个操作数是数值，在比较相等性之前先将字符串转换为数值；
+
+* 如果一个操作数是对象，另一个操作数不是，则调用对象的 valueOf\(\) 方法，用得到的基本类型值按照前面的规则进行比较；
+
+* null 和 undefined 是相等的。 要比较相等性之前，不能将 null 和 undefined 转换成其他任何值。
+
+* 如果有一个操作数是 NaN，则相等运算符返回 false，而不相等运算符返回 true。重要提示：即使两个操作数都是 NaN，相等运算符也返回 false；因为按照规则，NaN 不等于 NaN。
+
+* 如果两个操作数都是对象，则比较它们是不是同一个对象。如果两个操作数都指向同一个对象，则相等运算符返回 true；否则，返回 false。
 
 
+来看下面例子
+
+```
+console.log(null == undefined);  // true
+console.log("NaN" == NaN);  // false
+console.log(5 == NaN);  // false
+console.log(NaN == NaN);  // false
+console.log(NaN != NaN);  // true
+console.log(false == 0);  // true
+console.log(true == 1); // true
+console.log(true == 2);  // false
+console.log(undefined == 0);  // false
+console.log(null == 0);  // false
+console.log("5" == 5);  // true
+```
+
+**全等和不全等**
+
+除了在比较之前不转换操作数之外，全等（`===`）和不全等（`!==`）运算符与相等和不相等运算符没有什么区别。它只在两个操作数值跟类型完成相等的情况下才返回 true，如下面的例子所示：
+
+```
+console.log("55" == 55);  // true，因为转换后相等
+console.log("55" === 55);  // false，因为不同的数据类型不相等
+console.log(null == undefined);  // true，因为它们是类似的值
+console.log(null === undefined);  // false，因为它们是不同类型的值
+```
+
+### 条件运算符
+
+条件运算符是一种三元运算符，其语法如下：
+
+```
+variable = boolean_expression ? true_value : false_value;
+```
+
+含义是：对 boolean\_express 求值，如果其结果为 true，则给变量 variable 赋 true\_value 值；如果其结果为 false，则给变量 variable 赋 false\_value 值。
+
+来看下面例子：
+
+```
+var num1 = 10, 
+    num2 = 20;
+var max = (num1 > num2) ? num1 : num2;
+console.log(max);  // 20
+```
+
+### 赋值运算符
+
+简单的赋值运算符即等号（`=`），其作用是将右侧的值赋给左侧的变量，前面很多例子我们都已经用到过它了。这里就不再重复说明。
+
+如果在等号（`=`）前面再添加乘性运算符、加性运算符等就可以为符合赋值操作符。
+
+主要有以下几种：`*=`、`/=`、`%=`、`+=`、`-=`。
+
+我们拿 `+=` 来说明符合赋值操作符的使用规则：
+
+```
+var num = 10;
+num += 10; 
+console.log(num);  // 20 
+
+//相当于
+var num = 10;
+num = num + 10;
+```
+
+## 小结
+
+以上介绍了常用的一些操作符，还有很多在本教程里面没有介绍。大家可以通过查询更多的资料来进行补充学习。
 
