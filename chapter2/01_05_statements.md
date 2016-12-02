@@ -63,5 +63,3 @@ function hypotenuse(x, y) {
 
 ### if 语句
 
-
-
