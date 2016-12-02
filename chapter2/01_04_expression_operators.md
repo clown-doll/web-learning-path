@@ -367,7 +367,7 @@ console.log(5 - null);  // 5，因为null被转换成了0
 
 ### 关系操作符
 
- 关系操作符有：小于（&lt;）、大于（&gt;）、小于等于（&lt;=）和大于等于（&gt;=），它们都返回一个布尔值。
+关系操作符有：小于（&lt;）、大于（&gt;）、小于等于（&lt;=）和大于等于（&gt;=），它们都返回一个布尔值。
 
 如果关系操作符遵循以下规则：
 
@@ -423,6 +423,12 @@ console.log(a instanceof Array);  // true，a 是一个数组
 console.log(a instanceof Object);  // true，所有的数组都是对象
 console.log(a instanceof RegExp);  // false，数组不是正则表达式
 ```
+
+### 相等操作符
+
+有两组操作符：相等和不想等（先转换再比较）；全等和不全等（仅比较不转换）。
+
+**相等和不想等**
 
 
 
