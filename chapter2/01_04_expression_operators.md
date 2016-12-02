@@ -367,5 +367,62 @@ console.log(5 - null);  // 5，因为null被转换成了0
 
 ### 关系操作符
 
+ 关系操作符有：小于（&lt;）、大于（&gt;）、小于等于（&lt;=）和大于等于（&gt;=），它们都返回一个布尔值。
+
+如果关系操作符遵循以下规则：
+
+* 如果两个操作数都是数值，则执行数值比较。
+
+* 如果两个操作数都是字符串，则比较两个字符串对应的字符编码值（可以通过字符串的 charCodeAt\(\) 函数获取字符编码值）。
+
+* 如果一个操作数是数值，则将另一个操作数转换为一个数值，然后执行数值比较。
+
+* 如果一个操作数是对象，则调用这个对象的 valueOf\(\) 方法，用得到的结果按照前面的规则执行比较。如果对象没有 valueOf\(\) 方法，则调用 toString\(\) 方法，并用得到的结果根据前面的规则执行比较。
+
+* 如果一个操作数是布尔值，则先将其转换为数值，然后再执行比较。
+
+
+```
+console.log("Brick" < "alphabet");  // true
+console.log("brick" < "alphabet");  // false
+console.log("23" < "3");  // true
+console.log("23" < 3);  // false
+console.log("a" < 3);  // false
+console.log(NaN < 3);  // false
+console.log(NaN >= 3);  // false
+```
+
+**in 运算符**
+
+`in` 运算符希望它的左操作数是一个字符串或可以转换为字符串，希望它的右操作数是一个对象。如果右侧的对象拥有一个名为左操作数值的属性名，那么表达式返回 true，例如：
+
+```
+var point = { x:1, y:1 };  // 定义一个对象
+console.log("x" in point);  // true，对象有一个名为"x"的属性
+console.log("z" in point);  // false，对象中不存在名为"z"的属性
+console.log("toString" in point);  // true，对象继承了toString()方法
+
+var data = [7,8,9];  // 拥有三个元素的数组
+console.log("0" in data);  // true，数组包含元素"0"
+console.log(1 in data);  // true，数字转换为字符串
+console.log(3 in data);  // false，没有索引为3的元素
+```
+
+**instanceof 运算符**
+
+`instanceof` 运算符希望左操作数是一个对象，右操作数标识对象的构造函数。如果左侧的对象是右侧类的实例，则表达式返回 true；否则返回 false。比如：
+
+```
+var d = new Date();  // 通过 Date() 构造函数来创建一个新对象
+console.log(d instanceof Date);  // true，d 是由 Date() 创建的
+console.log(d instanceof Object);  // true，所有的对象都是 Object 的实例
+console.log(d instanceof Number);  // false，d 不是一个 Number 对象
+
+var a = [1, 2, 3];  // 通过数组字面量的写法创建一个数组
+console.log(a instanceof Array);  // true，a 是一个数组
+console.log(a instanceof Object);  // true，所有的数组都是对象
+console.log(a instanceof RegExp);  // false，数组不是正则表达式
+```
+
 
 
