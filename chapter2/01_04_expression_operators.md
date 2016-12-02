@@ -102,5 +102,113 @@ a OP (b OP c)
 
 ![](/assets/js-yxj.jpg)
 
+### 一元运算符
+
+只有一个操作数的运算符叫做一元运算符。
+
+**递增递减运算符**
+
+递增递减运算符分为：前置型（递增 `++i`，递减 `--i`）和后置型（递增 `i++`，递减 `i--`）。
+
+前置型指的是自身先计算，再后赋值给变量；后置型指的是先将自身的值赋给变量，然后再自增1。我们来看个例子：
+
+```
+// 前置型
+var i = 1;
+console.log(i);  // 1
+var a = ++i;
+console.log(a);  // 2
+console.log(i);  // 2
+
+// 后置型
+var b = i++;  
+console.log(b);  // 2
+console.log(i);  // 3
+```
+
+怎么理解这个例子呢？
+
+我们先来看前置型部分。上面的例子相当于这样：
+
+```
+// 先自身加1，再赋值
+var i = 1;
+i = i + 1;
+var a = i;
+```
+
+此时 i 已经为 2了，然后我们再看后置型部分，相当于：
+
+```
+// 此时 i = 2
+// 先赋值，再自身加1
+var b = i;
+i = i + 1;
+```
+
+**一元加和一元减**
+
+一元加即一个加号（+），本质上他对数组无任何影响，如：
+
+```
+var a = 10;
+a = + a;
+console.log(a);  // 20
+```
+
+但是，一元加对字符串却有作用，会把字符串转换成数字：
+
+```
+var a = "10";
+console.log(typeof a);  // "string"
+var b = +a;
+console.log(typeof b);  // "number"
+console.log(typeof a);  // "string"
+```
+
+上面那段代码将字符串 "10" 转换成了数字，它计算字符串的方式与 parseInt\(\) 类似。
+
+注意，最后打印变量 a 的类型，还是 "string" ，这是由于字符串的特殊性，即它是不可变的，一旦创建就不能改变。
+
+一元减即一个减号（-），其本质就是对数字求负值：
+
+```
+var a = 1;
+a = -a;
+console.log(a);  // -1
+```
+
+同样的，一元减也会把字符串转换成近似的数字，此外还会对其求负，如：
+
+```
+var a = "10";
+console.log(typeof a);  // "string"
+var b = - a;
+console.log(typeof b);  // "number"
+```
+
+**delete**
+
+delete 运算符用于删除对象属性或者数组元素，如果删除成功或所删除对象不存在，将返回true。如：
+
+```
+var o = {};
+o.name = "cat";
+console.log(o.name);  // "cat"
+console.log(delete o.name);  // true
+console.log(o.name);  // undefined 
+console.log(delete o.age);  // true
+```
+
+注意，内置核心和客户端属性是不能被删除的。
+
+**void**
+
+void 运算符对任何值返回 undefined。该运算符的作用如下：
+
+* 通过采用 `void 0` 取 `undefined` 比采用字面上的 `undefined` 更靠谱更安全，应该优先采用 `void 0` 这种方式。
+
+* 填充 `<a>` 的 `href` 确保点击时不会产生页面跳转；填充` <image>` 的 `src`，确保不会向服务器发出垃圾请求。
+
 
 
