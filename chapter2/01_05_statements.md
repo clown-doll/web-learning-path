@@ -101,7 +101,76 @@ if (age > 20) {
 }
 ```
 
+### switch 语句
 
+switch 语句与 if 语句类似，都是多分支判断语句。其语法如下：
+
+```
+switch (expression) {
+    case value: 
+        statement
+        break;
+    case value: 
+        statement 
+        break;
+    ...
+    default: statement
+}
+```
+
+switch 语句中的每一种情形（`case`）的含义是：如果表达式等于这个值（`value`），则执行后面的语句（`statement`）。而 `break` 关键字用于跳出 `switch` 语句，及执行完当前分支则跳出循环语句。如果省略 `break`，会导致执行完当前的 `case` 后，继续执行下一个 `case`，直到遇到 `break` 或者语句结束。最后的 `default` 关键字用于当表达式的值不匹配前面任何一个 `case`，则执行 `default` 后面的 `statement`。
+
+我们一起看一个例子：
+
+```
+switch (i) {
+    case 25:
+        console.log("25");
+        break;
+    case 35:
+        console.log("35");
+        break;
+    case 45:
+        console.log("45");
+        break;
+    default:
+        console.log("other!");
+}
+```
+
+我们一起回忆下，如果用 if 语句，应该怎么写上面的代码呢？
+
+```
+if (i == 25) {
+    console.log("25");
+} else if (i == 35) {
+    console.log("35");
+} else if (i == 45) {
+    console.log("45");
+} else {
+    console.log("other!");
+}
+```
+
+看上面的代码，写了一堆的 if else 语句。为了避免出现这种情况，我们通常规定，当判断分支大于等于 3 的情况，我们就使用 switch 语句来控制。
+
+当多个 case 执行的代码一样的情况下，我们可以将其合并处理，如下：
+
+```
+switch (i) {
+    case 25:
+    case 35:
+        console.log("25 或 35");
+        break;
+    case 45:
+        console.log("45");
+        break;
+    default:
+        console.log("other!");
+}
+```
+
+上面的例子，`case 25` 和 `case 35` 将同样执行 `console.log("25 或 35");`
 
 
 
