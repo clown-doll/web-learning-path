@@ -269,3 +269,26 @@ for (;;) {
 
 上面的代码，由于没有任何限制条件，就成了无限循环了。
 
+### for\/in 语句
+
+for\/in 语句用来枚举对象的属性。其语法如下：
+
+```
+for (variable in object) 
+    statement
+```
+
+看下面的例子：
+
+```
+for (var prop in window) {
+    console.log(prop);
+}
+```
+
+这个例子使用 for\/in 循环打印了 BOM 中 `window` 对象的所有属性（BOM 在后续课程中会学习）。每次执行循环时，都会将 `window` 对象中存在的一个属性名赋值给变量 `prop`。这个过程会一直持续到对象中的所有属性都被枚举一遍为止。
+
+在执行 for\/in 语句的过程中，JavaScript 解析器会首先计算 `object` 表达式。如果表达式为 `null` 或 `undefined` ，JavaScript 解析器会跳过循环并执行后续的代码。在 ES5 前，这种情况会报错。为了保证最大限度的兼容性，建议在使用 for\/in 循环之前，先检测确认该对象的值不是 `null` 或 `undefined`。
+
+
+
