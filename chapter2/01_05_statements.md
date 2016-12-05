@@ -63,3 +63,45 @@ function hypotenuse(x, y) {
 
 ### if 语句
 
+if 语句是最常用的一个语句，其语法如下：
+
+```
+if (condition) statement1 else statement2
+```
+
+其中 `condition` 是任意表达式，为判断语句的条件。如果对 `condition` 求值结果为 `true`，则执行 `statement1` ，如果对 `condition` 求值结果为 `false` ，则执行 `statement2` 。
+
+一起来看一个例子：
+
+```
+if (age > 18) {
+    console.log("成年了！");
+} else {
+    console.log("未成年！");
+}
+```
+
+其实，if 语句可以单独使用，不一定跟 else 语句同时出现：
+
+```
+if (age > 18) {
+    console.log("成年了！");
+}
+```
+
+另外，还可以像这样使用多分支 if 语句：
+
+```
+if (age > 20) {
+    console.log("年龄大于20！");
+} else if (age < 10) {
+    console.log("年龄小于10！");
+} else {
+    console.log("年龄介于20跟10之间！");
+}
+```
+
+
+
+
+
