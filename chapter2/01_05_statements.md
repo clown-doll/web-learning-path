@@ -290,5 +290,100 @@ for (var prop in window) {
 
 在执行 for\/in 语句的过程中，JavaScript 解析器会首先计算 `object` 表达式。如果表达式为 `null` 或 `undefined` ，JavaScript 解析器会跳过循环并执行后续的代码。在 ES5 前，这种情况会报错。为了保证最大限度的兼容性，建议在使用 for\/in 循环之前，先检测确认该对象的值不是 `null` 或 `undefined`。
 
+## 跳转语句
+
+跳转语句可以使得 JavaScript 执行从一个位置跳转到另一个位置。
+
+### break 语句
+
+前面在 switch 语句中，我们已经有接触过 break 语句。其语法即：
+
+```
+break;
+```
+
+在循环中，不管是出于什么原因，只要**不想继续执行整个循环**，都可以用 break 语句提前退出。
+
+看下面的例子：
+
+```
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+    if ( i == 5) {
+        break;
+    }
+}
+```
+
+上面的代码，只会打印出0，1，2，3，4，5 。因为当 `i` 为 5 的时候，使用了 `break` 语句，它会跳出整个循环，使循环终止。
+
+### continue 语句
+
+continue 语句与 break 语句很相似，但是不同的是，它不是退出循环，而是跳出当前循环、转而执行下一次循环。其语法为：
+
+```
+continue;
+```
+
+我们一起看一个例子：
+
+```
+var num = 0;
+
+for (var i = 1; i < 10; i++) {
+    if (i % 5 == 0) {
+        continue;
+    }
+    num++;
+}
+
+console.log(num); // 8
+```
+
+例子的结果显示 8，也就是循环总共执行了 8 次。当变量 `i` 等于 5 时，循环会在 `num` 再次递增之前退出，但接下来执行的是下一次循环，即i的值等于 6 的循环。于是，循环又继续执行，直到 i 等于 10 时自然结束。而 `num` 的最终值之所以是 8，是因为 continue 语句导致它少递增了一次。
+
+### return 语句
+
+return 语句是制定函数调用后的返回值。其语法为：
+
+```
+return expression;
+```
+
+return 语句只能在函数体内出现。
+
+当函数执行到 return 语句时，会终止执行，并返回 `expression` 的值供调用。如下面的例子：
+
+```
+function square(x) {
+    return x*x; 
+} 
+square(2);  // 结果将为 4 （2*2 = 4） 
+```
+
+如果函数没有 return 语句，将执行到最后一条语句，然后结束，函数最终返回 undefined 。
+
+return 语句也可以单独使用，不带 `expression` ，这样的话，函数最终也是返回 undefined。
+
+### throw 语句
+
+throw 语句用于将程序运行时产生的错误显示抛出。其语法是：
+
+```
+throw expression;
+```
+
+expression 的值可以是任意类型的。也可以是一个 Error 对象，这个对象是 JavaScript 内置对象，有一个 name 属性表示错误类型，一个 message 属性存储传递给构造函数的字符串。看下面的例子：
+
+```
+function factorial(x) {
+    // 如果输入参数是非法的，则抛出一个异常
+    if (x < 0) throw new Error("x不能是负数");
+    // 否则，计算出一个值，并正常地返回它
+    for (var f = 1; x > 1; f *= x, x--) /* empty */;
+    return f;
+}
+```
+
 
 
