@@ -120,6 +120,31 @@ arr.length = 5;  // 相当于 new Array(5)
 console.log(arr[4]);  // undefined   
 ```
 
+## 数组遍历
+
+使用 for 循环来遍历数组是最常见的方法：
+
+```
+var arr = ["a", "b", "c", "d"];
+for (var i = 0; i < arr.length; i++) {
+    console.log(i + ': ' + arr[i]);
+}
+```
+
+上面的代码将在控制台中输出以下结果：
+
+![](/assets/js-arr-for.jpg)
+
+但是在这个例子中，还有需要优化的地方：数组长度没有必要每次都去查询，只需要查询一次即可。 for 循环条件不符可以改写为：
+
+```
+for (var i = 0, len = arr.length; i < len; i++) {
+    // 循环体不变
+}  
+```
+
+
+
 
 
 
