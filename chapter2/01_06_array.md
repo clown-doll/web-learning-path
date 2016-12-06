@@ -60,5 +60,33 @@ var arr4 = ["a"];
 
 可以使用 `[]` 来访问数组的元素，`[]` 内为非负整数值：
 
+```
+var a = ["hello", "world"];
+// 索引从 0 开始
+console.log(a[0]);  // "hello"
+console.log(a[1]);  // "world"
+```
+
+如果需要修改数组元素的值，可以这样处理：
+
+```
+var a = ["hello", "world"];
+console.log(a[1]);  // "world"
+a[1] = "cat";  // 改写数组第二个元素
+console.log(a[1]);  // "cat"
+```
+
+## 数组长度
+
+每个数组都有一个 `length` 属性，用于标识数组的长度，即数组元素的个数。来看下面的例子：
+
+```
+console.log([].length);  // 0，该数组没有元素
+var arr = ["a", "b", "c"];  
+console.log(arr.length);  // 3
+```
+
+
+
 
 
