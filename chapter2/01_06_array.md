@@ -86,6 +86,40 @@ var arr = ["a", "b", "c"];
 console.log(arr.length);  // 3
 ```
 
+### 稀疏数组
+
+通常情况下，数组长度都是等于其元素的个数。但是有一种数组除外，即稀疏数组。
+
+稀疏数组就是包含从 0 开始的不连续索引的数组，其 `length` 属性值大于元素个数。
+
+看下面的例子：
+
+```
+var arr1 = new Array(5);
+console.log(arr1.length);  // 5。数组没有元素，但是其长度为5
+var arr2 = [];
+console.log(arr2.length);  // 0
+arr2[1000] = 0;
+console.log(arr2.length);  // 1001 ，长度为1001，只有第1001个元素有值
+```
+
+注意，以上例子省略的元素在数组中其实是存在的，值为 `undefined` 。
+
+同时，我们还能得出一个结论：如果为一个数组元素赋值，它的索引 `i` 大于或等于现有数组长度时，`length` 属性的值将自动设置为 `i+1`。
+
+另外，数组的 length 属性还有一个特殊行为，即当设置 length 属性为一个小于当前长度的非负整数 n 时，当前数组中那些索引大于或等于 n 的元素将从数组中删除：
+
+```
+var arr = [1, 2, 3, 4, 5]; 
+console.log(arr.length);  // 5
+arr.length = 3;
+console.log(arr);  // [1, 2, 3]
+arr.length = 0;
+console.log(arr);  // []
+arr.length = 5;  // 相当于 new Array(5)
+console.log(arr[4]);  // undefined   
+```
+
 
 
 
