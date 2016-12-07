@@ -172,5 +172,37 @@ for (var i = 0, len = arr.length; i < len; i++) {
 }
 ```
 
+还可以使用 for/in 循环处理稀疏数组。循环每次将一个可枚举的属性名（包括数组索引）赋值给循环变量，不存在的索引将不会遍历到。例如：
+
+```
+for(var index in sparseArray) {
+   var value = sparseArray[index];
+   // 此处可以使用索引和值做一些事情
+}
+```
+
+但由于 for/in 循环能够枚举继承的属性名，如添加到 `Array.prototype` 中的方法。基于这个原因，在数组上不应该使用 for/in 循环，除非使用额外的检测方法来过滤不想要的属性。例如：
+
+```
+for(var i in a) {
+    // 跳过继承的属性
+    if (!a.hasOwnProperty(i)) continue;
+
+    // 跳过不是非负整数的 i
+    if (String(Math.floor(Math.abs(Number(i)))) !== i) continue;
+}
+```
+
+ES 5 定义了一些遍历数组元素的新方法，按照索引的顺序按个传递给定义的一个函数。这些方法中最常用的就是 `forEach()` 方法。例如：
+
+```
+var data = [1,2,3,4,5];     // 这是需要遍历的数组
+var sumOfSquares = 0;       // 要得到数据的平方和
+data.forEach(function (x) {  // 把每个元素传递给此函数
+    sumOfSquares += x*x;    // 平方相加
+});
+console.log(sumOfSquares);  // 55. (1 + 4 + 9 + 16 + 25)
+```
+
 
 
