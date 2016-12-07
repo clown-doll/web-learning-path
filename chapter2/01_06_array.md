@@ -143,5 +143,34 @@ for (var i = 0, len = arr.length; i < len; i++) {
 }
 ```
 
-有些时候我们可能并
+有些时候我们可能并不清楚数组元素是否均存在。此时，我们在使用前可能需要先检测它们。
+
+如果想排除 null、undefined 和不存在的元素，可以像这样判断：
+
+```
+for (var i = 0, len = arr.length; i < len; i++) {
+    if (!a[i]) continue;  // 跳过 null、undefined 和不存在的元素
+    // 循环体
+}
+```
+
+如果只想跳过 undefined 和不存在的元素，可以像这样判断：
+
+```
+for (var i = 0, len = arr.length; i < len; i++) {
+    if (a[i] === undefined) continue;  // 跳过 undefined 和不存在的元素
+    // 循环体
+}
+```
+
+最后，如果只想跳过不存在的元素而仍然要处理存在的 undefined 元素，判断代码如下：
+
+```
+for (var i = 0, len = arr.length; i < len; i++) {
+    if (!(i in a)) continue;  // 跳过不存在的元素
+    // 循环体
+}
+```
+
+
 
