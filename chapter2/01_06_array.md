@@ -533,5 +533,17 @@ console.log(a);  // [5, 4, 3, 2, 1]
 
 从上面的例子同时可以看出，filter\(\) 方法同样不会改变原始数组。
 
+### every\(\)
 
+every\(\) 方法用于检测数组所有元素是否都符合指定条件（通过函数提供）。其语法如下：
+
+```
+arr.every(callback[, thisArg])
+```
+
+every\(\) 方法当且仅当针对数组中的所有元素调用判定函数都返回 true，它才返回 true：
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array
 
