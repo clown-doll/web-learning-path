@@ -379,5 +379,27 @@ console.log(a);  // [1, 2, 3]
 console.log(result);  // [4, 5, 6]
 ```
 
+splice\(\) 的第二个参数表示应该从数组中删除的元素个数，如果设置为 0，则不会删除元素：
+
+```
+var a = [1, 2, 3, 4, 5, 6];
+console.log(a.splice(3, 0));  // []
+console.log(a);  // [1, 2, 3, 4, 5, 6]
+console.log(a.splice(2,3));  // [3, 4, 5]
+console.log(a);  // [1, 2, 6]
+```
+
+从第三个参数开始，是指定了需要插入到数组中的元素，从第一个参数指定的位置开始插入：
+
+```
+var a = [1, 2, 3, 4, 5, 6];
+console.log(a.splice(2, 0, "a", "b"));  // []
+console.log(a);  // [1, 2, "a", "b", 3, 4, 5, 6]
+console.log(a.splice(2, 2, [1, 2], "a"));  // ["a", "b"]
+console.log(a);  // [1, 2, [1, 2], "a", 3, 4, 5, 6]
+```
+
+注意：splice\(\) 与 concat\(\) 不同，它会插入数组本身而不是数组元素。
+
 
 
