@@ -468,5 +468,30 @@ console.log(a.unshift(3));  // 3
 console.log(a);  // [3, 2, 4]
 ```
 
+### forEach\(\)
 
+forEach\(\) 方法从头至尾遍历数组，为每个元素调用指定回调函数。其语法如下：
+
+```
+arr.forEach(callback[, thisArg])
+```
+
+回调函数有三个参数，分别为：数组元素，元素索引和数组本身。
+
+看下面的例子：
+
+```
+var a = [1, 2, 3, 4, 5];
+var sum = 0;
+a.forEach(function(v, i, a){
+    a[i] = v + i;
+}); 
+console.log(a);  // [1, 3, 5, 7, 9]
+```
+
+注意：正常情况下，forEach\(\) 方法无法在所有元素都传递给回调函数前终止遍历。
+
+### map\(\)
+
+map\(\)
 
