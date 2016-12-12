@@ -493,5 +493,26 @@ console.log(a);  // [1, 3, 5, 7, 9]
 
 ### map\(\)
 
-map\(\)
+map\(\) 方法将调用数组的每个元素传递给指定的回调函数，并返回一个数组，它包含回调函数的返回值。其语法如下：
+
+```
+var new_array = arr.map(callback[, thisArg])
+```
+
+看下面的例子：
+
+```
+var a = [1, 2, 3];
+var newArr = a.map(function(x){
+    return x*x;
+});
+console.log(newArr);  // [1, 4, 9]
+console.log(a);  // [1, 2, 3]
+```
+
+从上面的例子可以看出， map\(\) 函数返回的是新数组，不会修改原始数组。
+
+### filter\(\)
+
+filter\(\) 方法
 
