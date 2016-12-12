@@ -306,7 +306,7 @@ var newArr = arr.concat([2, [4, 6]]);
 console.log(newArr);  // [1, 3, 5, 2, [4, 6]];
 ```
 
-注意：concat\(\) 方法不会改变原始数组。
+concat\(\) 方法不会改变原始数组。
 
 ### slice\(\)
 
@@ -317,7 +317,9 @@ arr.slice(begin)
 arr.slice(begin, end)
 ```
 
-第一个参数为要抽取的片段的起始下标（包括begin）。第二个参数为要抽取的片段的结尾下标（不包括end）。看下面的例子：
+slice\(\)第一个参数为要抽取的片段的起始下标（包括begin），第二个参数为要抽取的片段的结尾下标（不包括end）。
+
+看下面的例子：
 
 ```
 var a = [1, 2, 3, 4, 5, 6];
@@ -345,7 +347,37 @@ console.log(subArr2);  // [4]
 console.log(subArr3);  // []
 ```
 
+slice\(\) 方法不会改变原始数组。
 
+### splice\(\)
+
+splice\(\) 方法能在数组中插入或删除元素。其语法如下：
+
+```
+arr.splice(start)
+arr.splice(start, deleteCount)
+arr.splice(start, deleteCount, item1, item2, ...)
+```
+
+splice\(\) 的第一个参数指定了插入和（或）删除的起始位置。如果只指定一个参数，则从起始位置（包含start）开始到数组结尾的所有元素都将被删除：
+
+```
+var a = [1, 2, 3, 4, 5, 6];
+var result = a.splice(4);
+console.log(a);  // [1, 2, 3, 4]
+console.log(result);  // [5, 6]
+```
+
+从上面的例子中，我们可以看出：splice\(\) 方法会修改原始数组，并且返回一个由删除元素组成的数组。
+
+第一个参数还可以为负数，表示从数组结尾处规定位置：
+
+```
+var a = [1, 2, 3, 4, 5, 6];
+var result = a.splice(-3);
+console.log(a);  // [1, 2, 3]
+console.log(result);  // [4, 5, 6]
+```
 
 
 
