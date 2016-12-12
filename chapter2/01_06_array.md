@@ -401,5 +401,72 @@ console.log(a);  // [1, 2, [1, 2], "a", 3, 4, 5, 6]
 
 注意：splice\(\) 与 concat\(\) 不同，它会插入数组本身而不是数组元素。
 
+### push\(\) 和 pop\(\)
+
+push\(\) 和 pop\(\) 两个方法允许将数组当作栈来使用。
+
+push\(\) 方法在数组尾部添加一个或多个元素，并返回新数组长度。其语法如下：
+
+```
+arr.push([element1[, ...[, elementN]]])
+```
+
+pop\(\) 方法则相反，它删除数组的最后一个元素，返回它删除的值。其语法如下：
+
+```
+arr.pop()
+```
+
+两个方法都是修改并替换原始数组。来看下面的例子：
+
+```
+var stack = [];
+console.log(stack.push(1, 3, 5));  // 3
+console.log(stack);  // [1, 3, 5]
+console.log(stack.pop());  // 5
+console.log(stack);  // [1, 3]
+```
+
+### unshift\(\) 和 shift\(\)
+
+unshift\(\) 和 shift\(\) 两个方法行为类似 push\(\) 和 pop\(\)，不一样的是它们是在数组的头部而非尾部进行操作。
+
+unshift\(\) 方法在数组头部添加一个或多个元素，返回新数组长度。其语法如下：
+
+```
+arr.unshift([element1[, ...[, elementN]]])
+```
+
+shift\(\) 方法删除数组第一个元素并将其返回。其语法如下：
+
+```
+arr.shift()
+```
+
+两个元素也都是修改并替换原始数组。看下面的例子：
+
+```
+var a = [];
+console.log(a.unshift(5));  // 1
+console.log(a.unshift(2));  // 2
+console.log(a);  // [2, 5]
+console.log(a.shift());  // 2
+console.log(a);  // [5]
+```
+
+当使用多个参数调用 unshift\(\) 时，参数是一次性插入的，插入元素的顺序和它们在参数列表中的顺序一致：
+
+```
+var a = [];
+console.log(a.unshift(2, 3, 4));  // 3
+console.log(a);  // [2, 3, 4]
+console.log(a.shift());  // 2
+console.log(a.shift());  // 3
+console.log(a);  // [4]
+console.log(a.unshift(2));  // 2
+console.log(a.unshift(3));  // 3
+console.log(a);  // [3, 2, 4]
+```
+
 
 
