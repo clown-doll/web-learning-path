@@ -274,5 +274,37 @@ arr.sort(function(a, b){
 console.log(arr);  // [4, 33, 120, 220]
 ```
 
+### concat\(\)
+
+concat\(\) 方法用于连接数组。它会创建并返回一个新数组，新数组元素包含原始数据元素和 concat\(\) 的每个参数。其语法如下：
+
+```
+var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+```
+
+看下面的例子：
+
+```
+var arr = [1, 3, 5];
+var newArr = arr.concat(7, 9);
+console.log(newArr);  // [1, 3, 5, 7, 9]
+```
+
+如果参数自身是一个数组，则链接的是数组的元素，如：
+
+```
+var arr = [1, 3, 5];
+var newArr = arr.concat([7, 9], 2);
+console.log(newArr);  // [1, 3, 5, 7, 9, 2]
+```
+
+另外，concat\(\) 不会递归扁平化数组的元素，如：
+
+```
+var arr = [1, 3, 5];
+var newArr = arr.concat([2, [4, 6]]);
+console.log(newArr);  // [1, 3, 5, 2, [4, 6]];
+```
+
 
 
