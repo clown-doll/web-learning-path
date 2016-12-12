@@ -210,7 +210,7 @@ console.log(sumOfSquares);  // 55. (1 + 4 + 9 + 16 + 25)
 
 ### join\(\)
 
-Array.join\(\) 方法将数组中所有元素都转化为字符串并连接在一起，最后返回生成的字符串。其语法如下：
+join\(\) 方法将数组中所有元素都转化为字符串并连接在一起，最后返回生成的字符串。其语法如下：
 
 ```
 arr.join()  // 未显示指定分隔符
@@ -225,6 +225,53 @@ arr 为需要转化的数组，separator 为需要分隔符。
 var arr = [1, 3, 5];  // 创建一个数组
 console.log(arr.join());  // 1,3,5
 console.log(arr.join("-"));  // 1-3-5
+```
+
+### reverse\(\)
+
+reverse\(\) 方法将数组元素颠倒排序，返回逆序数组。其语法如下：
+
+```
+arr.reverse()
+```
+
+这个方法是直接操作在原数组上的，不会创建新数组：
+
+```
+var arr = [1, 3, 5]; 
+arr.reverse();
+console.log(arr);  // [5, 3, 1]
+```
+
+### sort\(\)
+
+sort\(\) 方法将数组中的元素排序并返回排序后的数组。其语法如下：
+
+```
+arr.sort()  // 不带参数
+arr.sort(compareFunction)  // 待参数
+```
+
+不带参数时调用 sort\(\) 方法，数组元素将按照字母表顺序排序：
+
+```
+var arr = ["banana", "cherry", "apple"];
+arr.sort();
+console.log(arr);   //["apple", "banana", "cherry"]
+```
+
+需要注意的是，如果数组内含有 undefined 元素，它们将会被排到数组末尾。
+
+我们还可以给 sort\(\) 方法传递一个比较函数。该函数决定了它的两个参数在排好序的数组中的先后顺序。假设第一个参数应该在前，比较函数应该返回一个小于 0 的数值。反之，假设第一个参数应该在后，函数应该返回一个大于 0 的数值。并且，假设两个值相等，函数返回 0 。看下面的例子：
+
+```
+var arr = [33, 4, 120, 220];
+arr.sort();  // [120, 220, 33, 4]
+console.log(arr); 
+arr.sort(function(a, b){
+    return a-b;
+});
+console.log(arr);  // [4, 33, 120, 220]
 ```
 
 
