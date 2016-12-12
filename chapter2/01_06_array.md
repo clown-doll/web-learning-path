@@ -514,5 +514,24 @@ console.log(a);  // [1, 2, 3]
 
 ### filter\(\)
 
-filter\(\) 方法
+filter\(\) 方法会创建一个新的数组，新数组的元素是通过检查指定数组中符合条件的所有元素。其语法如下：
+
+```
+var new_array = arr.filter(callback[, thisArg])
+```
+
+回调函数是用来逻辑判定的，返回 true 或 false。如果返回值为 true 或 能转化为 true 的值，那么传递给回调函数的元素就是新数组的子元素，如：
+
+```
+var a = [5, 4, 3, 2, 1];
+var subArr = a.filter(function(x){
+    return x < 3;
+});
+console.log(subArr);  // [2, 1]
+console.log(a);  // [5, 4, 3, 2, 1]
+```
+
+从上面的例子同时可以看出，filter\(\) 方法同样不会改变原始数组。
+
+
 
