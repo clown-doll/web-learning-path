@@ -306,5 +306,46 @@ var newArr = arr.concat([2, [4, 6]]);
 console.log(newArr);  // [1, 3, 5, 2, [4, 6]];
 ```
 
+注意：concat\(\) 方法不会改变原始数组。
+
+### slice\(\)
+
+slice\(\) 方法返回指定数组的一个片段或子数组。其语法如下：
+
+```
+arr.slice(begin) 
+arr.slice(begin, end)
+```
+
+第一个参数为要抽取的片段的起始下标（包括begin）。第二个参数为要抽取的片段的结尾下标（不包括end）。看下面的例子：
+
+```
+var a = [1, 2, 3, 4, 5, 6];
+var subArr = a.slice(0, 3);
+console.log(subArr);  // [1, 2, 3]  下标分别为 0, 1, 2
+```
+
+可以只传递一个参数，返回从起始位置到数组结尾的所有元素：
+
+```
+var a = [1, 2, 3, 4, 5, 6];
+var subArr = a.slice(3);
+console.log(subArr);  // [4, 5, 6]
+```
+
+参数还可以为负数，则该参数规定的是从字符串的尾部开始算起的位置：
+
+```
+var a = [1, 2, 3, 4, 5, 6];
+var subArr1 = a.slice(1, -1);
+var subArr2 = a.slice(-3, -2);
+var subArr3 = a.slice(-2, -3);
+console.log(subArr1);  // [2, 3, 4, 5]
+console.log(subArr2);  // [4]
+console.log(subArr3);  // []
+```
+
+
+
 
 
