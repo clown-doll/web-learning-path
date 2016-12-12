@@ -543,7 +543,23 @@ arr.every(callback[, thisArg])
 
 every\(\) 方法当且仅当针对数组中的所有元素调用判定函数都返回 true，它才返回 true：
 
+```
+var a = [1, 2, 3, 4, 5];
+var result1 = a.every(function(x){
+    return x < 10;
+});
+console.log(result1);  // true  
+var result2 = a.every(function(x){
+    return x % 2 === 0;
+});
+console.log(result2);  // false
+```
+
+注意：如果数组中检测到有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。
 
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array
+
+map\(\) filter\(\) every\(\) some\(\) 回调都包含三个参数：数组元素，元素索引和数组本身。
+
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\\_Objects/Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array)
 
