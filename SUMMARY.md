@@ -68,6 +68,7 @@
         * [表达式和运算符](chapter2/01_04_expression_operators.md)
         * [语句](chapter2/01_05_statements.md)
         * [数组](chapter2/01_06_array.md)
+        * [函数](chapter2/01_07_function.md)
 
 -----
 
