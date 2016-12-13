@@ -629,7 +629,45 @@ arr.indexOf(searchElement[, fromIndex = 0])
 rr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])
 ```
 
-indexOf\(\) 是从头至尾搜索，
+indexOf\(\) 是从头至尾搜索，而lastIndexOf\(\) 则反向搜索。
 
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\\_Objects/Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array)
+看下面的例子：
+
+```
+var a = [0, 1, 2, 1, 0];
+console.log(a.indexOf(1));  // 1
+console.log(a.lastIndexOf(1));  // 3
+```
+
+这两个方法还有一个可选参数，指定数组中的一个索引，表示从该索引处开始搜索。这个参数也可以是负数，表示相对数组末尾的偏移量，-1 表示数组最后一个元素。
+
+看下面的例子：
+
+```
+var a = [0, 1, 2, 1, 0];
+console.log(a.indexOf(1, 3));  // 3
+console.log(a.indexOf(1, -2));  // 3
+```
+
+## 数组类型
+
+在 ES5 中，可以用 Array.isArray\(\) 函数检测是否为数组：
+
+```
+console.log(Array.isArray([]));  // true
+console.log(Array.isArray({}));  // false 
+```
+
+ES5 前可以用以下函数代替 isArray\(\)：
+
+```
+var isArray = Function.isArray || function(o) {
+    return typeof o === "object" && 
+    Object.prototype.toString.call(o) === "[object Array]";
+}
+```
+
+## 小结
+
+在这个小节中，我们介绍了数组的创建、数组元素的读写、稀疏数组、数组长度、数组方法以及判断数组的方法。这里介绍的都是比较常用的数组相关知识，如想要了解更多更详细的内容，可以查看[数组对象API](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。
 
